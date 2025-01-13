@@ -1,9 +1,20 @@
+'use client'
 import { Socials } from "@/constants";
 import Image from "next/image";
 import React from "react";
 import { FiSun } from "react-icons/fi";
-import { FaSun } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa";
+
+import { useSelector, useDispatch} from 'react-redux';
+import { changeTheme } from '../../lib/counterSlice';
+import { RootState } from '../../lib/store';
+
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const theme = useSelector((state: RootState) => state.counter.isDark);
+  const handleThemeChange = () => {
+    dispatch(changeTheme());
+    };
   return (
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
@@ -11,16 +22,8 @@ const Navbar = () => {
           href="#about-me"
           className="h-auto w-auto flex flex-row items-center"
         >
-          <Image
-            src="/NavLogo.png"
-            alt="logo"
-            width={70}
-            height={70}
-            className="cursor-pointer hover:animate-slowspin"
-          />
-
           <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            WebChain Dev
+            Nevzat Atalay
           </span>
         </a>
 
@@ -38,19 +41,12 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5">
-        <FiSun className='text-gray-200 text-3xl md:text-4xl lg:text-5xl mx-5' />
-        </div>
-        <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
-          ))}
+        <div className="gap-5">
+          {
+            theme ? <FaMoon className='text-gray-200 text-2xl md:text-3xl lg:text-4xl sm:mx-5' onClick={handleThemeChange} />:
+            <FiSun className='text-gray-200 text-2xl md:text-3xl lg:text-4xl sm:mx-5' onClick={handleThemeChange} />
+          }
+          
         </div>
       </div>
     </div>
