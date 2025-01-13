@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import type { RootState } from '../../lib/store'
+import type { RootState } from '../lib/store'
 import { useSelector } from 'react-redux'
 
 import SkyBackground from "@/components/main/SkyBackground";
