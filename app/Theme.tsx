@@ -1,30 +1,20 @@
 'use client';
 import React from 'react'
 import type { RootState } from '../../lib/store'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../lib/counterSlice'
+import { useSelector } from 'react-redux'
+
+import SkyBackground from "@/components/main/SkyBackground";
+import StarsCanvas from "@/components/main/StarBackground";
 
 export default function Theme() {
-  const count = useSelector((state: RootState) => state.counter.value)
-  const dispatch = useDispatch()
+  const isDark = useSelector((state: RootState) => state.counter.isDark)
 
   return (
     <div>
-      <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
+             {
+          isDark ? <StarsCanvas /> 
+                 : <SkyBackground />
+        }
     </div>
   )
 }
