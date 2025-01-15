@@ -3,17 +3,14 @@ import {
 } from "@/constants";
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
-import SkillText from "../sub/SkillText";
-
 const Skills = () => {
   return (
     <section
       id="skills"
-      className="max-w-[100rem] mx-auto flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-40 py-20"
-      style={{ transform: "scale(0.9" }}
+      className="mx-auto flex flex-col items-center justify-center "
     >
-      <SkillText />
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-20 items-center">
+      <h1 className=" text-7xl my-auto">My Skills</h1>
+      <div className="flex flex-row justify-around flex-wrap items-center">
         {Skill_data.map((image, index) => (
           <SkillDataProvider
             key={index}

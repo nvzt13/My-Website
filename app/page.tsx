@@ -1,16 +1,17 @@
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
-import Theme from "./Theme";
-import Nav from "./Nav";
+import WelcomeSection from "@/components/main/WelcomeSection";
+import Theme from "@/components/main/Theme";
+import Download from "@/components/main/Download";
 
 export default function Home() {
 
   return (
-    <main className="h-full w-full">
-      <div className="flex flex-col gap-20">
-        <Nav />
+    <main className=" h-full w-full max-w-[768px] mx-auto overflow-hidden ">
+      <div className="flex flex-col">
+        <WelcomeSection />
         <Skills />
-        <Theme />
+        <Download />
         <Projects />
       </div>
     </main>

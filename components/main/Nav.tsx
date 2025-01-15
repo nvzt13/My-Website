@@ -4,8 +4,9 @@ import { GrMenu } from "react-icons/gr";
 import { FiSun, FiMenu, FiX } from "react-icons/fi"; // Menü açma kapama iconları
 import { FaMoon } from "react-icons/fa";
 import { useSelector, useDispatch } from 'react-redux';
-import { changeTheme } from '../lib/counterSlice';
-import { RootState } from '../lib/store';
+import { changeTheme } from '../../lib/counterSlice';
+import { RootState } from '../../lib/store';
+import ThemeToggle from './ThemeToggle';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,8 @@ const Nav = () => {
             href="#about-me"
             className="h-auto w-auto flex flex-row items-center"
           >
-            <span className="font-bold ml-[10px] md:block text-gray-300">
+            <ThemeToggle/>
+            <span className="font-bold ml-[10px] md:block ">
               Nevzat Atalay
             </span>
           </a>
@@ -39,14 +41,14 @@ const Nav = () => {
         </div>
         <div className={`${isOpen ? 'block' : 'hidden'} sm:flex sm:items-center sm:justify-end`}>
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">Account</a>
-            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">Work</a>
-            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">Blog</a>
+            <a className="font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">Home</a>
+            <a className="font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">Work</a>
+            <a className="font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">About</a>
                       <div className="gap-5">
             {theme ? (
-              <FaMoon className="text-gray-200 text-2xl" onClick={handleThemeChange} />
+              <FaMoon className="text-2xl" onClick={handleThemeChange} />
             ) : (
-              <FiSun className="text-gray-200 text-2xl" onClick={handleThemeChange} />
+              <FiSun className="text-2xl" onClick={handleThemeChange} />
             )}
           </div>
           </div>

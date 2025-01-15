@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-
+import Nav from "@/components/main/Nav";
 import {StoreProvider} from "../lib/StoreProvider";
 
 
@@ -23,8 +22,9 @@ export default function RootLayout({
   <StoreProvider>
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
+        className={`${inter.className} overflow-y-scroll overflow-x-hidden dark:bg-[#000] dark:text-white`}
       >
+       <Nav />
         {children}
         <Footer />
       </body>

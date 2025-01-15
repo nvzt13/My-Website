@@ -9,7 +9,7 @@ export interface CounterState {
 
 const initialState: CounterState = {
   value: 0,
-  isDark: false
+  isDark: true
 }
 
 export const counterSlice = createSlice({
