@@ -3,7 +3,7 @@ import Skills from "@/components/main/Skills";
 import WelcomeSection from "@/components/main/WelcomeSection";
 import Theme from "@/components/main/Theme";
 import Download from "@/components/main/Download";
-
+import SimpleSlider from './SimpleSlider'
 export default function Home() {
 
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         <WelcomeSection />
         <Skills />
         <Download />
-        <Projects />
+        <SimpleSlider />
       </div>
     </main>
   );
