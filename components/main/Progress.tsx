@@ -19,7 +19,14 @@ const Download = ({ bgcolor, completed, title }) => {
 
 const Progress = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-800 via-indigo-900 to-purple-900 p-8 rounded-xl shadow-lg w-full mx-auto">
+    <div
+      className="p-8 rounded-xl shadow-lg w-full mx-auto"
+      style={{
+        backgroundImage: 'url("/path/to/your/image.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <h2 className="text-white text-2xl font-bold mb-6 text-center">Yetkinlik İlerlemesi</h2>
       <Download bgcolor="bg-red-500" completed={80} title="Web Geliştirme" />
       <Download bgcolor="bg-green-500" completed={40} title="Network" />
@@ -27,5 +34,4 @@ const Progress = () => {
     </div>
   );
 };
-
 export default Progress;

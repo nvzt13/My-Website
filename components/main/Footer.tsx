@@ -7,28 +7,28 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full h-full bg-transparent shadow-lg">
-            <div className="w-full h-full flex flex-col items-center justify-around flex-wrap">
-                <div className="min-w-[200px] h-auto flex flex-row items-center justify-start">
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxTwitterLogo />
-                        <span className="text-[15px] ml-[6px]">Twitter</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxLinkedinLogo />
-                        <span className="text-[15px] ml-[6px]">Linkedin</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Github</span>    
-                    </p>
-                </div>
-            </div>
-            <div className=" text-[15px] text-center">
-                &copy; WebChain Dev 2023 Inc. All rights reserved
-            </div>
+    <footer className="w-full h-auto fixed bottom-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-lg z-50 transition-all duration-300 ease-in-out py-4">
+      <div className="max-w-7xl mx-auto flex flex-col items-center">
+        <div className="flex flex-row space-x-6 mb-4">
+          <a href="https://twitter.com" className="flex items-center hover:text-blue-400 transition duration-300">
+            <RxTwitterLogo className="text-2xl" />
+            <span className="text-sm ml-2">Twitter</span>
+          </a>
+          <a href="https://linkedin.com" className="flex items-center hover:text-blue-600 transition duration-300">
+            <RxLinkedinLogo className="text-2xl" />
+            <span className="text-sm ml-2">LinkedIn</span>
+          </a>
+          <a href="https://github.com" className="flex items-center hover:text-gray-400 transition duration-300">
+            <RxGithubLogo className="text-2xl" />
+            <span className="text-sm ml-2">GitHub</span>
+          </a>
+        </div>
+        <div className="text-sm text-center">
+          &copy; WebChain Dev 2023 Inc. All rights reserved
+        </div>
+      </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

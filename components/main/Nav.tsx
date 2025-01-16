@@ -1,24 +1,15 @@
 'use client'
 import { useState } from 'react';
 import { GrMenu } from "react-icons/gr";
-import { FiSun, FiMenu, FiX } from "react-icons/fi"; // Menü açma kapama iconları
-import { FaMoon } from "react-icons/fa";
-import { useSelector, useDispatch } from 'react-redux';
-import { changeTheme } from '../../lib/counterSlice';
-import { RootState } from '../../lib/store';
-import ThemeToggle from './ThemeToggle';
+import { FiX } from "react-icons/fi"; // Menü açma kapama iconları
+
+import ThemeToggle from '../sub/ThemeToggle';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const dispatch = useDispatch();
-  const theme = useSelector((state: RootState) => state.counter.isDark);
-  const handleThemeChange = () => {
-    dispatch(changeTheme());
   };
 
   return (
