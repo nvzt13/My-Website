@@ -4,12 +4,12 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface CounterState {
   value: number,
-  isDark: boolean
+  isDark: boolean | null 
 }
 
 const initialState: CounterState = {
   value: 0,
-  isDark: true
+  isDark: null
 }
 
 export const counterSlice = createSlice({
@@ -25,8 +25,9 @@ export const counterSlice = createSlice({
     incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload
     },
-    changeTheme: (state) => {
-      state.isDark = !state.isDark
+    changeTheme: (state, action) => {
+      state.isDark = action.payload
+      console.log(state.isDark)
     }
   },
 })

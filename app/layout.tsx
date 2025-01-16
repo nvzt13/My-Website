@@ -22,7 +22,7 @@ export default function RootLayout({
   <StoreProvider>
     <html lang="en">
       <body
-        className={`${inter.className} overflow-y-scroll overflow-x-hidden dark:bg-[#000] dark:text-white`}
+        className={`${inter.className} overflow-y-scroll overflow-x-hidden  dark:text-white`}
       >
        <Nav />
         {children}

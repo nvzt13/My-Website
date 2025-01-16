@@ -15,8 +15,16 @@
    z-index: -1;
 }
 section{
-  min-height: 600px;
+  min-height: 700px;
 }
 progress{
   width:100%;
+}
+.sec{
+    background: linear-gradient(145deg, #047857, #60a5fa, #be123c); /* Gece mavisi tonları */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.dark{
+  color: red; /* Slate Gray */
 }

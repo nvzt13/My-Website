@@ -22,38 +22,30 @@ const Nav = () => {
   };
 
   return (
-    <header className="w-full h-auto fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur z-50  flex flex-wrap sm:justify-start py-4 ">
-      <nav className="max-w-[100rem] w-full mx-auto px-2 sm:flex sm:items-center sm:justify-between">
-        <div className="flex flex-row items-center justify-between">
+    <header className="w-full h-auto fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-lg z-50 transition-all duration-300 ease-in-out py-4">
+      <nav className="max-w-[100rem] w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between">
+        <div className="flex items-center justify-between w-full">
           <a
             href="#about-me"
-            className="h-auto w-auto flex flex-row items-center"
+            className="text-2xl font-bold tracking-wide text-gray-200 transition-transform duration-300 hover:scale-105"
           >
-            <ThemeToggle/>
-            <span className="font-bold ml-[10px] md:block ">
-              Nevzat Atalay
-            </span>
+            Nevzat Atalay
           </a>
           {/* Mobil menü butonu */}
-          <button onClick={toggleMenu} className="sm:hidden text-3xl text-gray-200">
+          <button onClick={toggleMenu} className="sm:hidden text-3xl text-gray-200 transition-transform duration-300 hover:scale-110 focus:outline-none">
             {isOpen ? <FiX /> : <GrMenu />} {/* Açık/Kapalı duruma göre ikon değişir */}
           </button>
         </div>
-        <div className={`${isOpen ? 'block' : 'hidden'} sm:flex sm:items-center sm:justify-end`}>
-          <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-            <a className="font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">Home</a>
-            <a className="font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">Work</a>
-            <a className="font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400" href="#">About</a>
-                      <div className="gap-5">
-            {theme ? (
-              <FaMoon className="text-2xl" onClick={handleThemeChange} />
-            ) : (
-              <FiSun className="text-2xl" onClick={handleThemeChange} />
-            )}
-          </div>
-          </div>
-        </div>
 
+        <div className={`${isOpen ? 'block' : 'hidden'} w-full sm:flex sm:items-center sm:justify-end transition-all duration-500 ease-in-out`}>
+          <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5 mx-auto">
+            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400 transition-colors duration-300 border-b-2" href="#">Home</a>
+            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="#">Works</a>
+            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="#">About</a>
+            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="#">Contact</a>
+          </div>
+          <ThemeToggle />
+        </div>
       </nav>
     </header>
   );
