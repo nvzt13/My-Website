@@ -5,11 +5,12 @@ interface Props {
   src: string;
   title: string;
   description: string;
+  className: string
 }
 
-const ProjectCard = ({ src, title, description }: Props) => {
+const ProjectCard = ({ src, title, description, className }: Props) => {
   return (
-    <div className="overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] h-[300px]">
+    <div className={className}>
       <Image
         src={src}
         alt={title}

@@ -34,12 +34,12 @@ export default function Projects() {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 py-10 mb-[120px]">
+    <section className="bg-gray-100 dark:bg-gray-900 py-10 mb-[120px]">
       <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8">
         My Projects
       </h2>
       <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-10">
-        Here are some of the projects I've worked on. Click on the cards to learn more!
+        Here are some of the projects...
       </p>
       <Slider {...settings} className="my-10">
         <div className="px-4">
@@ -73,6 +73,6 @@ export default function Projects() {
           color: #2B6CB0; /* Tailwind blue-600 */
         }
       `}</style>
-    </div>
+    </section>
   );
 }

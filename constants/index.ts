@@ -92,27 +92,30 @@ export const skillsData = [
     },
   ];
 
-  
-  
-  
-  
-  
-  
-  
-  export const Socials = [
+export const projectData = [
+  {
+    title: "30 Days Of React",
+    src: "/30_daysR.jpg",
+    description: " 30 Gunde react challange"
+  },
     {
-      name: "Discord",
-      src: "/instagram.svg",
-    },
+    title: "Portfolio",
+    src: "/js.png",
+    description: " 30 Gunde react challange"
+  },
     {
-      name: "Facebook",
-      src: "/facebook.svg",
-    },
-    {
-      name: "Instagram",
-      src: "/discord.svg",
-    },
-  ];
+    title: "React",
+    src: "/30_daysR.jpg",
+    description: " 30 Gunde"
+  }
+]
+  
+  
+  
+  
+  
+  
+
   
   
   

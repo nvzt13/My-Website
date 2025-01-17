@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full h-auto fixed bottom-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-lg z-50 transition-all duration-300 ease-in-out py-4">
+    <footer className=" bottom-0 w-full h-auto shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-lg z-50 transition-all duration-300 ease-in-out py-4">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="flex flex-row space-x-6 mb-4">
           <a href="https://twitter.com" className="flex items-center hover:text-blue-400 transition duration-300">

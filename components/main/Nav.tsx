@@ -17,23 +17,23 @@ const Nav = () => {
       <nav className="max-w-[100rem] w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between w-full">
           <a
-            href="#about-me"
-            className="text-2xl font-bold tracking-wide text-gray-200 transition-transform duration-300 hover:scale-105"
+            href="/"
+            className="text-2xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 transition-transform duration-300 hover:scale-110 hover:bg-gradient-to-l shadow-md hover:shadow-purple-500/50"
           >
             Nevzat Atalay
           </a>
           {/* Mobil menü butonu */}
-          <button onClick={toggleMenu} className="sm:hidden text-3xl text-gray-200 transition-transform duration-300 hover:scale-110 focus:outline-none">
+          <button onClick={toggleMenu} className="sm:hidden text-3xl text-gray-200 dark:text-white transition-transform duration-300 hover:scale-110 focus:outline-none">
             {isOpen ? <FiX /> : <GrMenu />} {/* Açık/Kapalı duruma göre ikon değişir */}
           </button>
         </div>
 
         <div className={`${isOpen ? 'block' : 'hidden'} w-full sm:flex sm:items-center sm:justify-end transition-all duration-500 ease-in-out`}>
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5 mx-auto">
-            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400 transition-colors duration-300 border-b-2" href="#">Home</a>
-            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="#">Works</a>
-            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="#">About</a>
-            <a className="font-medium text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="#">Contact</a>
+            <a className="font-medium dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/">Home</a>
+            <a className="font-medium dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/works">Works</a>
+            <a className="font-medium dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/about">About</a>
+            <a className="font-medium dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/contact">Contact</a>
           </div>
           <ThemeToggle />
         </div>
