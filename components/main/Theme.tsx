@@ -8,7 +8,6 @@ import StarsCanvas from "@/components/sub/StarBackground";
 
 export default function Theme() {
   const isDark = useSelector((state: RootState) => state.counter.isDark)
-console.log('bu sayfa' + isDark)
   return (
     <div>
              {

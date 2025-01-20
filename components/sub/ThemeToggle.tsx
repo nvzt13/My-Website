@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { RootState } from '../../lib/store';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeTheme } from '../../lib/counterSlice';
+import { changeTheme } from '../../lib/themeSlice';
 import { FaMoon } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
 import { RiComputerLine } from "react-icons/ri";

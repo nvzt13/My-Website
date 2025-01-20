@@ -13,7 +13,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="w-full h-auto fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-lg z-50 transition-all duration-300 ease-in-out py-4">
+    <header className="w-full h-auto fixed shadow-lg top-0 shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-3xl z-50 transition-all duration-300 ease-in-out py-4">
       <nav className="max-w-[100rem] w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between w-full">
           <a
@@ -28,12 +28,12 @@ const Nav = () => {
           </button>
         </div>
 
-        <div className={`${isOpen ? 'block' : 'hidden'} w-full sm:flex sm:items-center sm:justify-end transition-all duration-500 ease-in-out`}>
+        <div className={`${isOpen ? 'block' : 'hidden'} w-full sm:flex sm:items-center sm:justify-end transition-all duration-500 ease-in-out text-[#000]`}>
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5 mx-auto">
-            <a className="font-medium dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/">Home</a>
-            <a className="font-medium dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/works">Works</a>
-            <a className="font-medium dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/about">About</a>
-            <a className="font-medium dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/contact">Contact</a>
+            <a className="font-bold text-lg dark:text-gray-300 hover:text-ligh dark:hover:text-blue-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/">Home</a>
+            <a className="font-medium dark:text-gray-300 text-lg hover:text-ligh dark:hover:text-blue-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/works">Works</a>
+            <a className="font-medium dark:text-gray-300 text-lg hover:text-ligh dark:hover:text-blue-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/about">About</a>
+            <a className="font-medium dark:text-gray-300 text-lg hover:text-ligh dark:hover:text-blue-500 focus:outline-none focus:text-gray-400 transition-colors duration-300" href="/contact">Contact</a>
           </div>
           <ThemeToggle />
         </div>

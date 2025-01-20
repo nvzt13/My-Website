@@ -4,18 +4,19 @@ import ProjectCard from '@/components/sub/ProjectCard';
 
 const Works = () => {
   return (
-    <div className="my-52 py-16 bg-gradient-to-b from-gray-50 to-gray-200">
-      <h2 className="text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-600 animate-text">
+    <div className="my-24 py-16 mx-auto">
+      <h2 className="text-5xl font-extrabold text-center text-transparent bg-clip-text bg-dark mb-6">
         My Works
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto px-6">
+      <hr />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto mt-5 px-8">
         {projectData.map((work, index) => (
           <ProjectCard
             key={index}
             src={work.src}
             title={work.title}
             description={work.description}
-            className="transition-transform transform hover:-translate-y-2 hover:shadow-xl rounded-lg overflow-hidden"
+            className="flex flex-col m-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
           />
         ))}
       </div>

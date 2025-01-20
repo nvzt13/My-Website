@@ -100,7 +100,7 @@ export const projectData = [
   },
     {
     title: "Portfolio",
-    src: "/js.png",
+    src: "/my-website.png",
     description: " 30 Gunde react challange"
   },
     {

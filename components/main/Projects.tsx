@@ -4,10 +4,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from '@/components/sub/ProjectCard';
+import { projectData } from '@/constants/index';
 
 export default function Projects() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -34,45 +35,24 @@ export default function Projects() {
   };
 
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-10 mb-[120px]">
+    <section className="bg-gray-100 dark:bg-gray-900 py-10 mb-52">
       <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8">
         My Projects
       </h2>
       <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-10">
         Here are some of the projects...
       </p>
-      <Slider {...settings} className="my-10">
-        <div className="px-4">
-          <ProjectCard 
-            src="/30_daysR.jpg"
-            title="30 Days of React"
-            description="A 30-day challenge to learn React"
+      <Slider {...settings} className="">
+      {projectData.map((work, index) => (
+          <ProjectCard
+            key={index}
+            src={work.src}
+            title={work.title}
+            description={work.description}
+            className="flex flex-col justify-between mx-4 h-96 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
           />
-        </div>
-        <div className="px-4">
-          <ProjectCard 
-            src="/my-website.png"
-            title="My Personal Website"
-            description="A portfolio website to showcase my projects"
-          />
-        </div>
-        <div className="px-4">
-          <ProjectCard 
-            src="/javascript.png"
-            title="JavaScript Fundamentals"
-            description="A project focused on mastering JavaScript basics"
-          />
-        </div>
+        ))}
       </Slider>
-      <style jsx>{`
-        .slick-dots li button:before {
-          font-size: 12px;
-          color: #4A5568; /* Tailwind gray-600 */
-        }
-        .slick-dots li.slick-active button:before {
-          color: #2B6CB0; /* Tailwind blue-600 */
-        }
-      `}</style>
     </section>
   );
 }
