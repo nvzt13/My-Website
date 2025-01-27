@@ -13,9 +13,9 @@ export default function Projects() {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 4000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    speed: 3000, // Geçiş hızını optimize ettik
+    autoplaySpeed: 4000,
+    cssEase: "ease", // Geçişleri yumuşattık
     responsive: [
       {
         breakpoint: 1024,
@@ -35,21 +35,23 @@ export default function Projects() {
   };
 
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-10 mb-52">
-      <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8">
+    <section className="flex items-between justify-center flex-col opacity-90">
+      {/* Başlık ve alt metin arasındaki boşluğu azalttık */}
+      <h2 className="text-4xl pt-12 sm:text-5xl font-extrabold text-center text-dark dark:text-gray-100 mb-8">
         My Projects
       </h2>
-      <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-10">
-        Here are some of the projects...
-      </p>
-      <Slider {...settings} className="">
-      {projectData.map((work, index) => (
+      <hr className="w-24 border-b-2 border-dark dark:border-light mb-24 mx-auto"/>
+
+      {/* Slider öğeleri arasındaki boşlukları optimize ettik */}
+      <Slider {...settings} className="mx-auto max-w-5xl px-4">
+        {projectData.map((work, index) => (
           <ProjectCard
             key={index}
             src={work.src}
             title={work.title}
             description={work.description}
             className="flex flex-col justify-between mx-4 h-96 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
+            href={work.href}
           />
         ))}
       </Slider>

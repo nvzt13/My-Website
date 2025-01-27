@@ -14,11 +14,21 @@
    bottom: 0;
    z-index: -1;
 }
-progress{
-  width:100%;
+section{
+  min-height: 768px;
 }
-.sec{
-    background: linear-gradient(145deg, #047857, #60a5fa, #be123c); /* Gece mavisi tonları */
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+@keyframes rolling {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100vw) rotate(540deg); /* 1,5 dönüş sağa doğru */
+  }
+  100% {
+    transform: translateX(0) rotate(1080deg); /* 3 dönüş sola doğru */
+  }
+}
+
+.animate-rolling {
+  animation: rolling 10s linear infinite;
 }

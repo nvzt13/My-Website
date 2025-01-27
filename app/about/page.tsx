@@ -1,7 +1,19 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 const About = () => {
   return (
     <div className="flex justify-center">
-      <div className="max-w-3xl mx-auto my-52     p-6 md:p-8 my-24 rounded-lg shadow-lg bg-white dark:bg-gray-800 dark:text-light">
+      <div className="max-w-3xl mx-auto my-52 p-6 md:p-8 my-24 rounded-lg shadow-xl bg-white dark:bg-gray-800 dark:text-light">
+        <div className="flex justify-center mb-8">
+<Image 
+  src="/me.jpg"
+  alt="Nevzat's portrait, a Front-end Developer"
+  width={300}
+  height={300}
+  className="w-80 h-80 object-cover object-[50%_40%] rounded-full border-4 border-indigo-400 shadow-lg"
+/>
+        </div>
         <h2 className="text-4xl font-bold mb-6 text-center text-gray-800 dark:text-light">Hakkımda</h2>
         
         <p className="text-justify indent-8 font-medium text-lg leading-relaxed mb-4">
@@ -15,12 +27,18 @@ const About = () => {
           PHP, Node.js, ve MySQL gibi teknolojilerle çalışarak, projelerin tüm süreçlerinde yer aldım.
         </p>
 
-        <p className="text-justify indent-8 font-medium text-lg leading-relaxed">
+        <p className="text-justify indent-8 font-medium text-lg leading-relaxed mb-6">
           Kariyerim boyunca sürekli olarak öğrenmeye ve kendimi geliştirmeye odaklandım. Ekip çalışmasına önem veriyor
           ve her zaman en iyi çözümleri sunmayı hedefliyorum. Detaylara önem veren ve analitik düşünen bir
           profesyonelim. <span className="text-indigo-400">Yeni teknolojilere olan ilgimle</span>, yazılım geliştirme alanında kendimi daha da ileriye
           taşımak için fırsatlar arıyorum.
         </p>
+
+        <div className="flex justify-center">
+          <Link href="/contact" className="bg-indigo-400 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-indigo-500 transition">
+            İletişime Geç
+          </Link>
+        </div>
       </div>
     </div>
   );
