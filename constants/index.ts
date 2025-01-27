@@ -56,19 +56,12 @@ export const skillsData = [
       level: "Advanced"
     },
     {
-      skill_name: "Framer Motion",
-      Image: "/framer.png",
-      width: 80,
-      height: 80,
-      level: "Advanced"
-    },
-    {
-      skill_name: "Material UI",
-      Image: "/mui.png",
-      width: 80,
-      height: 80,
-      level: "Advanced"
-    },
+  skill_name: "Material UI",
+  Image: "/mui.png",
+  width: 80,
+  height: 80,
+  level: "Advanced"
+},
    {
       skill_name: "Node js",
       Image: "/node-js.png",
@@ -94,19 +87,22 @@ export const skillsData = [
 
 export const projectData = [
   {
-    title: "30 Days Of React",
-    src: "/30_daysR.jpg",
-    description: " 30 Gunde react challange"
+    title: "Countries App",
+    src: "/countries.jpg",
+    description: "Dünya ülkeleri üzerinde arama ve filtreleme yaparak , nüfus verileri ve diğer özelliklere  erişebileceğiniz responsive bir nextjs uygulaması.",
+    href: "https://countries-app-seven-chi.vercel.app/"
   },
+{
+  title: "Personal Blog App",
+  src: "/blog.jpg",
+  description: "Kendi blog yazılarınızı oluşturabileceğiniz, düzenleyebileceğiniz ve kişiselleştirebileceğiniz modern bir Next.js uygulaması. Kolay kullanım, hızlı erişim ve kullanıcı dostu tasarım ile blog yazarlığınızı bir üst seviyeye taşıyın.",
+  href: "https://personal-blog-app-vert.vercel.app/"
+},
     {
-    title: "Portfolio",
-    src: "/my-website.png",
-    description: " 30 Gunde react challange"
-  },
-    {
-    title: "React",
-    src: "/30_daysR.jpg",
-    description: " 30 Gunde"
+    title: "Task Menegament App",
+    src: "/blog.jpg",
+    description: "coming",
+    href: "/"
   }
 ]
   

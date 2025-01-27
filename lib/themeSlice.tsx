@@ -3,21 +3,19 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface CounterState {
-  value: number,
-  isDark: boolean | null 
+  isDark: boolean
 }
 
 const initialState: CounterState = {
-  value: 0,
-  isDark: null
+  isDark: false
 }
 
 export const themeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
-    changeTheme: (state, action) => {
-      state.isDark = action.payload
+    changeTheme: (state) => {
+      state.isDark = !state.isDark
     }
   },
 })
