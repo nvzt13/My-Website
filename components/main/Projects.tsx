@@ -48,6 +48,7 @@ export default function Projects() {
         {projectData.map((work, index) => (
           <div key={index} className="group px-2">  {/* Kartlar arasındaki boşluk azaltıldı */}
             <ProjectCard
+              id={work.id}
               src={work.src}
               title={work.title}
               date={work.date}

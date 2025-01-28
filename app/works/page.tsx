@@ -4,13 +4,6 @@ import { projectData } from "@/constants/index";
 import ProjectCard from "@/components/sub/ProjectCard";
 
 const Works = () => {
-
-  const [expandedCardId, setExpandedCardId] = useState<number | null>(null);
-
-  const handleExpandClick = (id: number) => {
-    setExpandedCardId((prevId) => (prevId === id ? null : id));
-  };
-
   return (
     <section className="mx-auto my-12">
       <h2 className="text-5xl font-bold text-center mb-6 text-dark dark:text-light font-sans">
