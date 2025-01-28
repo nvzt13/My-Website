@@ -20,7 +20,7 @@ export default function ThemeToggle() {
 
 
   return (
-    <div className="flex justify-center items-center space-x-4 dark:text-white">
+    <div className="flex justify-center items-center space-x-4 m-4 dark:text-white">
       {isDark ? (
         <FiSun onClick={handleChangeTheme} className="text-2xl cursor-pointer" />
       ) : (
