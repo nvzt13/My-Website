@@ -33,8 +33,8 @@ const Footer = () => {
           </Link>
         </div>
         <div className="text-sm text-center text-dark dark:text-light">
-          &copy; Nevzat Atalay {new Date().getFullYear()}
-        </div>
+          &copy; Nevzat Atalay 2024
+                  </div>
       </div>
     </footer>
   );

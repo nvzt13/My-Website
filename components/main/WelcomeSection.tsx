@@ -63,7 +63,7 @@ const WelcomeSection = () => {
       >
         <Link 
           href="/contact" 
-          className="absolute left-0 bottom-0 w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 bg-gradient-to-r from-indigo-600 to-sky-500 dark:from-gray-800 dark:to-gray-900 text-white rounded-full opacity-90 z-50 flex items-center justify-center text-lg font-semibold shadow-xl transform transition-all duration-500 hover:scale-110 hover:opacity-100 animate-bounce border-2 border-indigo-600 dark:border-indigo-400"
+          className="text-center absolute left-0 bottom-0 w-20 h-20 sm:w-40 sm:h-40  bg-gradient-to-r from-indigo-600 to-sky-500 dark:from-gray-800 dark:to-gray-900 text-white rounded-full opacity-90 z-50 flex items-center justify-center text-sm sm:text-2xl font-semibold shadow-xl transform transition-all duration-500 hover:scale-110 hover:opacity-100 animate-bounce border-2 border-indigo-600 dark:border-indigo-400"
         >
           Contact me
         </Link>

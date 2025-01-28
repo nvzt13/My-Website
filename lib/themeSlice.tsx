@@ -1,25 +1,23 @@
+import { createSlice } from '@reduxjs/toolkit';
 
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
-
-export interface CounterState {
-  isDark: boolean
+export interface ThemeState {
+  isDark: boolean;
 }
 
-const initialState: CounterState = {
-  isDark: false
-}
+const initialState: ThemeState = {
+  isDark: false,
+};
 
 export const themeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
     changeTheme: (state) => {
-      state.isDark = !state.isDark
-    }
+      state.isDark = !state.isDark;
+    },
   },
-})
+});
 
-export const { changeTheme } = themeSlice.actions
+export const { changeTheme } = themeSlice.actions;
 
-export default themeSlice.reducer
+export default themeSlice.reducer;

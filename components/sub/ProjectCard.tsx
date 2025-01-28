@@ -1,37 +1,82 @@
-import React from 'react';
+import * as React from 'react';
+import AspectRatio from '@mui/joy/AspectRatio';
+import Card from '@mui/joy/Card';
+import CardContent from '@mui/joy/CardContent';
+import CardOverflow from '@mui/joy/CardOverflow';
+import Divider from '@mui/joy/Divider';
+import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ProjectCardProps } from '@/type/types'
 
-interface ProjectCardProps {
-  src: string;
-  title: string;
-  description: string;
-  className?: string; 
-  href: string;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({ src, title, description, className = '', href }) => {
+export default function OverflowCard({
+  src,
+  title,
+  date,
+  href,
+  technologies,
+}: ProjectCardProps) {
   return (
-    <div className={`${className}`}>
-      <div className="img-wrapper overflow-hidden">
-        <Image 
-          src={src} 
-          alt={title} 
-          width={500}
-          height={500}
-          objectFit="cover"
-          className="w-full object-[50%_8%] h-40 object-cover"
-        />
-      </div>
-      <div className="p-4 flex flex-col">
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">{title}</h3>
-<p className="text-gray-600 dark:text-gray-400 mb-4 max-h-12 overflow-hidden text-ellipsis whitespace-nowrap">{description}</p>
-        <Link href={href} target="_blank" className="w-full py-3 bg-gradient-to-r from-blue-500 to-teal-400 text-white font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-teal-500 focus:ring-4 focus:ring-blue-300 transition duration-300 text-center">
-            View Project
-        </Link>
-      </div>
-    </div>
+    <div className="flex justify-center my-4">
+    <Card
+      variant="outlined"
+      sx={{
+        width: 320,
+        borderRadius: '16px',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+      }}
+      className="group hover:scale-105 hover:shadow-lg dark:bg-gray-800 dark:border-gray-700"
+    >
+      <CardOverflow>
+        <AspectRatio ratio="2">
+          <Image
+            height={500}
+            width={500}
+            src={src}
+            loading="lazy"
+            alt={title}
+            className="object-contain object-[50%_0] w-full h-full rounded-t-lg transition-all duration-300 ease-in-out group-hover:opacity-80"
+          />
+        </AspectRatio>
+      </CardOverflow>
+      <CardContent>
+        <Typography
+          level="title-md"
+          className="group-hover:text-indigo-600 transition-all duration-300 ease-in-out dark:text-white"
+        >
+          {title}
+        </Typography>
+        <Typography
+          level="body-xs"
+          textColor="text.secondary"
+          className="group-hover:text-gray-900 transition-all duration-300 ease-in-out dark:text-gray-400 dark:group-hover:text-gray-200"
+        >
+          Technologies: {technologies}
+        </Typography>
+      </CardContent>
+      <CardOverflow variant="soft" className=" dark:bg-gray-900 text-dark dark:text-light bg-light">
+        <Divider inset="context" className="dark:bg-gray-700" />
+        <CardContent orientation="horizontal" className="flex justify-between items-center">
+          <Typography
+            level="body-xs"
+            textColor="text.secondary"
+            sx={{ fontWeight: 'md' }}
+            className="group-hover:text-indigo-600 transition-all duration-300 ease-in-out dark:text-light dark:group-hover:text-indigo-500"
+          >
+            <Link href={href} target="_blank" rel="noopener noreferrer">
+              Visit Project
+            </Link>
+          </Typography>
+          <Typography
+            level="body-sm"
+            className="group-hover:text-gray-900 transition-all duration-300 ease-in-out  dark:text-light dark:group-hover:text-gray-300"
+          >
+            {date}
+          </Typography>
+        </CardContent>
+      </CardOverflow>
+    </Card>
+  </div>
+  
   );
-};
-
-export default ProjectCard;
+}

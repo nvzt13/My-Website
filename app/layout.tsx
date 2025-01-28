@@ -6,10 +6,11 @@ import Nav from "@/components/main/Nav";
 import {StoreProvider} from "../lib/StoreProvider";
 import Theme from "@/components/sub/Theme";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
+  title: "Nevzat Atalay",
   description: "This is my portfolio",
 };
 

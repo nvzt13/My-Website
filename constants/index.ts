@@ -87,23 +87,29 @@ export const skillsData = [
 
 export const projectData = [
   {
+    id:1,
     title: "Countries App",
     src: "/countries.jpg",
-    description: "Dünya ülkeleri üzerinde arama ve filtreleme yaparak , nüfus verileri ve diğer özelliklere  erişebileceğiniz responsive bir nextjs uygulaması.",
-    href: "https://countries-app-seven-chi.vercel.app/"
+    href: "https://countries-app-seven-chi.vercel.app/",
+    technologies:"Next.js, Redux-Toolkit, Tailwind, TypeScript",
+    date:"Ocak 12, 2025"
   },
-{
-  title: "Personal Blog App",
-  src: "/blog.jpg",
-  description: "Kendi blog yazılarınızı oluşturabileceğiniz, düzenleyebileceğiniz ve kişiselleştirebileceğiniz modern bir Next.js uygulaması. Kolay kullanım, hızlı erişim ve kullanıcı dostu tasarım ile blog yazarlığınızı bir üst seviyeye taşıyın.",
-  href: "https://personal-blog-app-vert.vercel.app/"
-},
-    {
-    title: "Task Menegament App",
+  {
+    id:2,
+    title: "Personal Blog App",
     src: "/blog.jpg",
-    description: "coming",
-    href: "/"
-  }
+    href: "https://personal-blog-app-vert.vercel.app/",
+    technologies:"Next.js, Redux-Toolkit, Tailwind, TypeScript",
+    date:"Ocak 22, 2025"
+  },
+  {
+  id:3,
+  title: "Task Menegament App",
+  src: "/blog.jpg",
+  href: "/",
+  technologies:"Next.js, Redux-Toolkit, Tailwind, TypeScript",
+  date:"Ocak 30, 2025"
+},
 ]
   
   

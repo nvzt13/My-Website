@@ -29,11 +29,11 @@ const Progress = () => {
   return (
     <section className="rounded-lg my-8 px-8 w-full flex flex-col items-center justify-center bg-gradient-to-r from-white-300 to-sky-500 dark:from-gray-800 dark:to-gray-900 opacity-90">
       <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-gray-800 dark:text-gray-100 mb-8 opacity-80">
-        Yetkinlik İlerlemesi
+      Competency Advances
       </h2>
       <hr className="border-b-2 border-gray-800 dark:border-gray-100 mb-12 w-24 mx-auto" />
       
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 w-full">
         <Prog completed={80} title="Web Geliştirme" className="bg-gradient-to-r from-purple-400 to-purple-900 dark:from-purple-600 dark:to-purple-900"/>
         <Prog completed={40} title="Backend" className="bg-gradient-to-r from-green-300 to-green-700 dark:from-green-500 dark:to-green-700" />
         <Prog completed={50} title="Network" className="bg-gradient-to-r from-red-400 to-red-600 dark:from-red-500 dark:to-red-700"/>

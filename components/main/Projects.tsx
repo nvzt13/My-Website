@@ -9,13 +9,13 @@ import { projectData } from '@/constants/index';
 export default function Projects() {
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: true,  // Sonsuz kaydırma
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 3000, // Geçiş hızını optimize ettik
-    autoplaySpeed: 4000,
-    cssEase: "ease", // Geçişleri yumuşattık
+    autoplay: true,  // Otomatik oynatma
+    autoplaySpeed: 0,  // Geçişler arasındaki süreyi artırdık
+    speed: 10000,  // Geçişin yavaş olması için daha uzun süre ayarladık
+    cssEase: "linear",  // Geçişi daha yumuşak hale getirdik
     responsive: [
       {
         breakpoint: 1024,
@@ -25,9 +25,9 @@ export default function Projects() {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 640, // "sm" ekranlar için ek bir breakpoint
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // Küçük ekranlarda bir kart gösterilecek
           slidesToScroll: 1,
         },
       },
@@ -35,24 +35,26 @@ export default function Projects() {
   };
 
   return (
-    <section className="flex items-between justify-center flex-col opacity-90">
-      {/* Başlık ve alt metin arasındaki boşluğu azalttık */}
-      <h2 className="text-4xl pt-12 sm:text-5xl font-extrabold text-center text-dark dark:text-gray-100 mb-8">
+    <section className="flex justify-center flex-col opacity-90">
+      <div className="mb-24">
+      <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-dark dark:text-gray-100">
         My Projects
       </h2>
-      <hr className="w-24 border-b-2 border-dark dark:border-light mb-24 mx-auto"/>
+      <hr className="w-24 border-b-2 border-dark dark:border-light mb-6 mx-auto"/>
 
+      </div>
       {/* Slider öğeleri arasındaki boşlukları optimize ettik */}
-      <Slider {...settings} className="mx-auto max-w-5xl px-4">
+      <Slider {...settings} className="mx-auto max-w-full sm:max-w-[768px]">
         {projectData.map((work, index) => (
-          <ProjectCard
-            key={index}
-            src={work.src}
-            title={work.title}
-            description={work.description}
-            className="flex flex-col justify-between mx-4 h-96 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
-            href={work.href}
-          />
+          <div key={index} className="group px-2">  {/* Kartlar arasındaki boşluk azaltıldı */}
+            <ProjectCard
+              src={work.src}
+              title={work.title}
+              date={work.date}
+              href={work.href}
+              technologies={work.technologies}
+            />
+          </div>
         ))}
       </Slider>
     </section>
