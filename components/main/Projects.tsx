@@ -16,6 +16,7 @@ export default function Projects() {
     autoplaySpeed: 0,  // Geçişler arasındaki süreyi artırdık
     speed: 10000,  // Geçişin yavaş olması için daha uzun süre ayarladık
     cssEase: "linear",  // Geçişi daha yumuşak hale getirdik
+    arrows:false,
     responsive: [
       {
         breakpoint: 1024,

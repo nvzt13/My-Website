@@ -91,7 +91,7 @@ export const projectData = [
     title: "Countries App",
     src: "/countries.jpg",
     href: "https://countries-app-seven-chi.vercel.app/",
-    technologies:"Next.js, Redux-Toolkit, Tailwind, TypeScript",
+    technologies:"Next.js, Tailwind, TypeScript",
     date:"Ocak 12, 2025"
   },
   {
@@ -99,15 +99,15 @@ export const projectData = [
     title: "Personal Blog App",
     src: "/blog.jpg",
     href: "https://personal-blog-app-vert.vercel.app/",
-    technologies:"Next.js, Redux-Toolkit, Tailwind, TypeScript",
+    technologies:"Next.js, Tailwind, TypeScript",
     date:"Ocak 22, 2025"
   },
   {
   id:3,
-  title: "Task Menegament App",
-  src: "/blog.jpg",
-  href: "/",
-  technologies:"Next.js, Redux-Toolkit, Tailwind, TypeScript",
+  title: "Task Menegament App coming...",
+  src: "/.jpg",
+  href: "#",
+  technologies:"Next.js, Prisma, Tailwind, TypeScript, Auth.js",
   date:"Ocak 30, 2025"
 },
 ]

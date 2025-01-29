@@ -34,7 +34,7 @@ const Progress = () => {
       <hr className="border-b-2 border-gray-800 dark:border-gray-100 mb-12 w-24 mx-auto" />
       
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 w-full">
-        <Prog completed={80} title="Web Geliştirme" className="bg-gradient-to-r from-purple-400 to-purple-900 dark:from-purple-600 dark:to-purple-900"/>
+        <Prog completed={80} title="Web Development" className="bg-gradient-to-r from-purple-400 to-purple-900 dark:from-purple-600 dark:to-purple-900"/>
         <Prog completed={40} title="Backend" className="bg-gradient-to-r from-green-300 to-green-700 dark:from-green-500 dark:to-green-700" />
         <Prog completed={50} title="Network" className="bg-gradient-to-r from-red-400 to-red-600 dark:from-red-500 dark:to-red-700"/>
       </div>
