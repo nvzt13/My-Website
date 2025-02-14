@@ -5,7 +5,7 @@ import ProjectCard from "@/components/sub/ProjectCard";
 
 const Works = () => {
   return (
-    <section className="mx-auto my-12">
+    <section className="mx-auto my-32 bg-background p-8">
       <h2 className="text-5xl font-bold text-center mb-6 text-dark dark:text-light font-sans">
         My Works
       </h2>

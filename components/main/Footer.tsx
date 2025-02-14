@@ -4,7 +4,7 @@ import { RxGithubLogo, RxTwitterLogo, RxLinkedinLogo } from "react-icons/rx";
 
 const Footer = () => {
   return (
-    <footer className="dark:text-light relative bottom-0 w-full h-auto shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-lg z-50 transition-all duration-300 ease-in-out py-6">
+    <footer className="bottom-0 w-full h-auto shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-lg z-50 transition-all duration-300 ease-in-out py-6">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="flex flex-row space-x-8 mb-6">
           <Link
@@ -32,7 +32,7 @@ const Footer = () => {
             <span className="text-base ml-3 group-hover:underline">GitHub</span>
           </Link>
         </div>
-        <div className="text-sm text-center text-dark dark:text-light">
+        <div className="text-sm text-center">
           &copy; Nevzat Atalay 2024
                   </div>
       </div>

@@ -20,7 +20,18 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "types": [
+      "node",
+      "react",
+      "react-dom",
+      "react-reconciler",
+      "react-slick",
+      "react-transition-group",
+      "three",
+      "webxr"
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

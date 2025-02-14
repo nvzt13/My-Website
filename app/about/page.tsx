@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 const About = () => {
   return (
-    <div className="flex justify-center">
-      <div className="max-w-3xl mx-auto my-52 p-6 md:p-8 my-24 rounded-lg shadow-xl bg-white dark:bg-gray-800 dark:text-light">
+    <div className="flex justify-center my-8">
+      <div className="max-w-3xl mx-auto p-6 md:p-8 my-24 rounded-lg shadow-xl bg-secondary">
         <div className="flex justify-center mb-8">
 <Image 
   src="/me.jpg"

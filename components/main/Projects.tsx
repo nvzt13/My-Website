@@ -36,16 +36,16 @@ export default function Projects() {
   };
 
   return (
-    <section className="flex justify-center flex-col opacity-90">
-      <div className="mb-24">
-      <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-dark dark:text-gray-100">
+    <section className="flex justify-center flex-col bg-foreground p-8">
+      <div className="max-w-7xl mx-auto">
+      <h2 className="text-4xl pt-12 sm:text-5xl font-extrabold text-center mb-8">
         My Projects
       </h2>
-      <hr className="w-24 border-b-2 border-dark dark:border-light mb-6 mx-auto"/>
+      <hr className="border-b-2 border-border mb-24 w-24 mx-auto"/>
 
       </div>
       {/* Slider öğeleri arasındaki boşlukları optimize ettik */}
-      <Slider {...settings} className="mx-auto max-w-full sm:max-w-[768px]">
+      <Slider {...settings} className="mx-auto max-w-full sm:max-w-[710px]">
         {projectData.map((work, index) => (
           <div key={index} className="group px-2">  {/* Kartlar arasındaki boşluk azaltıldı */}
             <ProjectCard

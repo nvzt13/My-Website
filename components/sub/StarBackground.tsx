@@ -33,7 +33,7 @@ const StarBackground = (props: any) => {
 };
 
 const StarsCanvas = () => (
-  <div className="sky">
+  <div className="sky bg-gray-900">
     <Canvas
       camera={{ position: [0, 0, 1], fov: 75 }}
     >

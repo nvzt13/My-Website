@@ -1,15 +1,16 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+"use client";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {Button} from "../ui/button";
 
 const WelcomeSection = () => {
   return (
-    <section className="h-[760px] my-8 flex flex-col items-center justify-center bg-gradient-to-r dark:from-gray-800 dark:to-gray-900 opacity-90 relative overflow-hidden">
-      <div className="text-center text-dark w-full relative z-20">
+    <section className="mt-20 flex flex-col items-center justify-center relative overflow-hidden bg-background p-2">
+      <div className="text-center w-full relative z-20 ">
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-snug mb-6 dark:text-gray-100 w-full drop-shadow-lg"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 w-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -17,7 +18,7 @@ const WelcomeSection = () => {
           Welcome to My Website, I am
         </motion.h1>
         <motion.h2
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl dark:text-gray-100 font-sans font-extrabold w-full text-dark animate-pulse"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold w-full"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -33,27 +34,27 @@ const WelcomeSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <Image 
+          <Image
             src="/me.jpg"
             alt="me"
-            width={200}  // Responsive width
+            width={200} // Responsive width
             height={200} // Responsive height
-            className="w-[250px] h-[250px] sm:w-[200px] sm:h-[200px] rounded-full object-cover object-[50%_40%] z-10 mb-8 border-4 border-indigo-700 dark:border-white shadow-lg"
+            className="w-[250px] h-[250px] sm:w-[200px] sm:h-[200px] rounded-full object-cover object-[50%_40%] z-10 mb-8 border-4 border-border"
           />
         </motion.div>
         <motion.p
-          className="text-2xl sm:text-2xl lg:text-3xl dark:text-gray-300 font-semibold text-center mb-6 transform transition-all duration-500 ease-in-out hover:text-indigo-400"
+          className="text-2xl sm:text-2xl lg:text-3xl font-semibold text-center mb-6 transform transition-all duration-500 ease-in-out "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
         >
-          A Passionate Web Developer <span className="text-indigo-500">Bringing Ideas to Life</span>
+          A Passionate Web Developer <span>Bringing Ideas to Life</span>
         </motion.p>
       </div>
 
       {/* Divider line */}
       <div className="w-full max-w-[400px] mx-auto relative z-20">
-        <hr className="border-t-2 border-dark dark:border-light mb-6" />
+        <hr className="border-t-2 border-border mb-6" />
       </div>
 
       <motion.div
@@ -61,11 +62,8 @@ const WelcomeSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <Link 
-          href="/contact" 
-          className="text-center absolute left-0 bottom-0 w-20 h-20 sm:w-40 sm:h-40  bg-gradient-to-r from-indigo-600 to-sky-500 dark:from-gray-800 dark:to-gray-900 text-white rounded-full opacity-90 z-50 flex items-center justify-center text-sm sm:text-2xl font-semibold shadow-xl transform transition-all duration-500 hover:scale-110 hover:opacity-100 animate-bounce border-2 border-indigo-600 dark:border-indigo-400"
-        >
-          Contact me
+        <Link href="/contact">
+          <Button>Contact me</Button>
         </Link>
       </motion.div>
     </section>

@@ -80,7 +80,7 @@ const BubbleCanvas: React.FC = () => {
     });
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full sky" />;
+  return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full sky bg-gradient-to-b from-sky-300 via-sky-500 to-sky-900" />;
 };
 
 export default BubbleCanvas;

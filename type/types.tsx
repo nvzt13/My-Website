@@ -7,3 +7,10 @@ export interface ProjectCardProps {
     technologies: string;
   }
   
+  export interface ProjectDataProps {
+    title: string;
+    address: string;
+    technologies: string;
+    date: string;
+    file: string ;
+  }
