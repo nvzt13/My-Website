@@ -1,12 +1,13 @@
 'use client';
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from '@/components/sub/ProjectCard';
 import { projectData } from '@/constants/index';
-
+import {fetchAllProjects} from '@/actions/fetch-projects'
 export default function Projects() {
+  const [projects, setProjects] = useState([])
   const settings = {
     dots: false,
     infinite: true,  // Sonsuz kaydırma
@@ -34,7 +35,26 @@ export default function Projects() {
       },
     ],
   };
+useEffect(()=>{
+  const getProjects = async () => {
+    
 
+  try {
+      const res = await fetchAllProjects();
+      if (res.success) {
+        console.log(res);
+        setProjects(res.allProjects)
+        alert("File fetch successfully!");
+      } else {
+        console.log(res);
+        alert("File can't be fetch.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+getProjects()
+},[])
   return (
     <section className="flex justify-center flex-col bg-foreground p-8">
       <div className="max-w-7xl mx-auto">
@@ -46,16 +66,12 @@ export default function Projects() {
       </div>
       {/* Slider öğeleri arasındaki boşlukları optimize ettik */}
       <Slider {...settings} className="mx-auto max-w-full sm:max-w-[710px]">
-        {projectData.map((work, index) => (
-          <div key={index} className="group px-2">  {/* Kartlar arasındaki boşluk azaltıldı */}
-            <ProjectCard
-              id={work.id}
-              src={work.src}
-              title={work.title}
-              date={work.date}
-              href={work.href}
-              technologies={work.technologies}
-            />
+        {projects.map((work, index) => (
+          <div key={index} className="group px-2">
+              {work.file}
+
+      
+          
           </div>
         ))}
       </Slider>

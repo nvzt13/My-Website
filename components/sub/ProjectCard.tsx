@@ -10,11 +10,12 @@ import Link from 'next/link';
 import { ProjectCardProps } from '@/type/types'
 
 export default function OverflowCard({
-  src,
+  id,
   title,
-  date,
-  href,
+  address,
   technologies,
+  date,
+  file,
 }: ProjectCardProps) {
   return (
     <div className="flex justify-center my-4">
@@ -31,9 +32,9 @@ export default function OverflowCard({
             <Image
               height={400}
               width={500}
-              src={src}
+              src={file}
               loading="lazy"
-              alt={title}
+              alt={id}
               className="object-contain object-[50%_0] w-full h-full rounded-t-lg transition-all duration-300 ease-in-out group-hover:opacity-80"
             />
           </AspectRatio>
@@ -62,7 +63,7 @@ export default function OverflowCard({
               sx={{ fontWeight: 'md' }}
               className="group-hover:text-indigo-600 transition-all duration-300 ease-in-out dark:text-light dark:group-hover:text-indigo-500"
             >
-              <Link href={href} target="_blank" rel="noopener noreferrer">
+              <Link href={address} target="_blank" rel="noopener noreferrer">
                 Visit Project
               </Link>
             </Typography>

@@ -24,17 +24,21 @@ const AddProject = () => {
     file: undefined,
   });
 
+const [loading, setLoading] = useState(false)
   // Form gönderme fonksiyonu
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
 
     try {
+      setLoading(true)
       const res = await createProject(formData); // Verileri backend'e gönder
       if (res && res.status === 201) {
         alert("Proje başarıyla eklendi");
+      setLoading(false)
       } else {
         alert("Proje eklenirken bir hata oluştu");
+      setLoading(false)
       }
     } catch (error) {
       console.error("Error submitting form:", error); // Hata loglama
@@ -128,7 +132,10 @@ const AddProject = () => {
             </div>
 
             <Button type="submit" className="w-full">
-              Projeyi Ekle
+              {
+                loading ? "Gönderiliyor..." 
+                       : "Projeyi Ekle"
+              }
             </Button>
           </form>
         </CardContent>
