@@ -1,8 +1,8 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { RootState } from '../../lib/store';
-import { useSelector, useDispatch } from 'react-redux';
-import { changeTheme } from '../../lib/themeSlice';
+"use client";
+import { useEffect, useState } from "react";
+import { RootState } from "../../lib/redux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { changeTheme } from "../../lib/redux/themeSlice";
 import { FaMoon } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
 
@@ -12,19 +12,23 @@ export default function ThemeToggle() {
   const dispatch = useDispatch();
 
   const handleChangeTheme = () => {
-
-    document.documentElement.classList.toggle('dark');
+    document.documentElement.classList.toggle("dark");
 
     dispatch(changeTheme());
   };
 
-
   return (
     <div className="flex justify-center items-center space-x-4 m-4 dark:text-white">
       {isDark ? (
-        <FiSun onClick={handleChangeTheme} className="text-2xl cursor-pointer" />
+        <FiSun
+          onClick={handleChangeTheme}
+          className="text-2xl cursor-pointer"
+        />
       ) : (
-        <FaMoon onClick={handleChangeTheme} className="text-2xl cursor-pointer" />
+        <FaMoon
+          onClick={handleChangeTheme}
+          className="text-2xl cursor-pointer"
+        />
       )}
     </div>
   );

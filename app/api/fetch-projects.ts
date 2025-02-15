@@ -1,9 +1,8 @@
 "use server"
 import prisma from "@/lib/prisma/client";
-import { ProjectDataProps } from "@/type/types";
 
 // Proje oluşturma işlemi
-export const fetchAllProjects = async (projectData: ProjectDataProps) => {
+export const fetchAllProjects = async () => {
   try {
 
     const allProjects = await prisma.post.findMany();

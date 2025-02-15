@@ -1,24 +1,24 @@
-'use client';
+"use client";
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ProjectCard from '@/components/sub/ProjectCard';
+import ProjectCard from "@/components/sub/ProjectCard";
 
-import { fetchAllProjects } from '@/actions/fetch-projects';
+import { fetchAllProjects } from "@/app/api/fetch-projects";
+import { ProjectCardProps } from "@/type/types";
 
 export default function Projects() {
   const [projects, setProjects] = useState<ProjectCardProps[]>([]);
-
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,
-    speed: 10000,
-    cssEase: "linear",
+    autoplaySpeed: 3000, // 0 yerine 3000 ms (3 saniye) bekleme süresi
+    speed: 1000, // 10000 ms yerine daha uygun bir hız (1000 ms)
+    cssEase: "ease-in-out", // Daha doğal bir geçiş
     arrows: false,
     responsive: [
       {
@@ -42,16 +42,13 @@ export default function Projects() {
     const getProjects = async () => {
       try {
         const res = await fetchAllProjects();
-        if (res.success) {
-          console.log(res);
-          setProjects(res.allProjects);
-          alert("File fetch successfully!");
+        if (res && res.success) {
+          setProjects(res.allProjects || []);
         } else {
-          console.log(res);
-          alert("File can't be fetch.");
+          console.log("File can't be fetch.");
         }
       } catch (error) {
-        console.error("Error:", error);
+        console.log(error);
       }
     };
     getProjects();

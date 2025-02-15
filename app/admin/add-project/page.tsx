@@ -12,7 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ProjectCardProps } from "@/type/types";
-import { createProject } from "@/actions/create-project";
+import { createProject } from "@/app/api/create-project";
 
 const AddProject = () => {
   // Form state yönetimi
