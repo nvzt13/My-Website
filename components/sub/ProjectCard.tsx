@@ -9,8 +9,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ProjectCardProps } from '@/type/types'
 
-export default function OverflowCard({
-  id,
+export default function ProjectCard({
   title,
   address,
   technologies,
@@ -34,7 +33,7 @@ export default function OverflowCard({
               width={500}
               src={file}
               loading="lazy"
-              alt={id}
+              alt={file}
               className="object-contain object-[50%_0] w-full h-full rounded-t-lg transition-all duration-300 ease-in-out group-hover:opacity-80"
             />
           </AspectRatio>

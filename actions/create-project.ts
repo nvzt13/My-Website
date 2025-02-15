@@ -1,9 +1,9 @@
 "use server"
 import prisma from "@/lib/prisma/client";
-import { ProjectDataProps } from "@/type/types";
+import { ProjectCardProps } from "@/type/types";
 
 // Proje oluşturma işlemi
-export const createProject = async (projectData: ProjectDataProps) => {
+export const createProject = async (projectData: ProjectCardProps) => {
   try {
 
     const newProject = await prisma.post.create({

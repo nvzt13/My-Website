@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
-    experimental: {
-      serverActions: true,  // Server Actions özelliğini etkinleştir
-    },
-  };
-  
+  experimental: {
+    serverActionsBodySizeLimit: '5mb', // Server Actions için body limitini 5mb olarak ayarlıyoruz
+    serverActions: true,  // Server Actions özelliğini etkinleştir
+  },
+};

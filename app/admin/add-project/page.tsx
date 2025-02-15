@@ -11,12 +11,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ProjectDataProps } from "@/type/types";
+import { ProjectCardProps } from "@/type/types";
 import { createProject } from "@/actions/create-project";
 
 const AddProject = () => {
   // Form state yönetimi
-  const [formData, setFormData] = useState<ProjectDataProps>({
+  const [formData, setFormData] = useState<ProjectCardProps>({
     title: "",
     address: "",
     technologies: "",

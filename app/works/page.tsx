@@ -11,17 +11,21 @@ const Works = () => {
       </h2>
       <hr className="border-t-2 border-dark dark:border-lighr mb-12" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto mt-5 px-4 md:px-8">
-        {projectData.map((work) => (
-          <ProjectCard
-            key={work.id}
-            id={work.id}
-            src={work.src}
-            title={work.title}
-            date={work.date}
-            href={work.href}
-            technologies={work.technologies}
-          />
-        ))}
+              {projects.length > 0 ? (
+          projects.map((work, index) => (
+            <div key={index} className="group px-2">
+              <ProjectCard
+                title={work.title}
+                address={work.address}
+                technologies={work.technologies}
+                date={work.date}
+                file={work.file}
+              />
+            </div>
+          ))
+        ) : (
+          <div>loading</div>
+        )}
       </div>
     </section>
   );
