@@ -7,9 +7,17 @@ import ProjectCard from "@/components/sub/ProjectCard";
 
 import { fetchAllProjects } from "@/app/api/fetch-projects";
 import { ProjectCardProps } from "@/type/types";
+import { useSelector, useDispatch } from "react-redux";
+import { setProjects } from "@/lib/redux/projectSlice";
+import { RootState } from "../../lib/redux/store";
+
+
 
 export default function Projects() {
-  const [projects, setProjects] = useState<ProjectCardProps[]>([]);
+const projects = useSelector((state: RootState) => state.projects);
+
+const dispatch = useDispatch()
+
   const settings = {
     dots: false,
     infinite: true,
@@ -43,7 +51,7 @@ export default function Projects() {
       try {
         const res = await fetchAllProjects();
         if (res && res.success) {
-          setProjects(res.allProjects || []);
+          dispatch(setProjects(res.allProjects))
         } else {
           console.log("File can't be fetch.");
         }
@@ -80,6 +88,11 @@ export default function Projects() {
           <div>loading</div>
         )}
       </Slider>
+      {
+        projects.length > 0 ? projects.map((pro)=>(
+        <div>{pro}</div>
+        )) : <div>loading</div>
+      }
     </section>
   );
 }

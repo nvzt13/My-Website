@@ -1,20 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {ProjectCardProps} from '@/type/types'
+import {ProjectInitialStateProps} from '@/type/types'
 
-const initialState: ProjectCardProps = {
-  isDark: false,
+const initialState: ProjectInitialStateProps = {
+  projects: []
 };
 
-export const themeSlice = createSlice({
-  name: 'theme',
+export const projectsSlice = createSlice({
+  name: 'projects',
   initialState,
   reducers: {
-    changeTheme: (state) => {
-      state.isDark = !state.isDark;
+    setProjects: (state, action) => {
+      state.projects = action.payload
     },
   },
 });
 
-export const { changeTheme } = themeSlice.actions;
+export const { setProjects } = projectsSlice.actions;
 
-export default themeSlice.reducer;
+export default projectsSlice.reducer;

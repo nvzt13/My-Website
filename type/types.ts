@@ -9,3 +9,7 @@ export interface ProjectCardProps {
 export interface ThemeState {
   isDark: boolean;
 }
+ 
+export interface ProjectInitialStateProps {
+  projects: ProjectCardProps[]
+}
