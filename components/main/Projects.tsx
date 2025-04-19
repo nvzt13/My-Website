@@ -5,16 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from "@/components/sub/ProjectCard";
 
-import { fetchAllProjects } from "@/app/api/fetch-projects";
-import { ProjectCardProps } from "@/type/types";
 import { useSelector, useDispatch } from "react-redux";
-import { setProjects } from "@/lib/redux/projectSlice";
 import { RootState } from "../../lib/redux/store";
 
 
 
 export default function Projects() {
-const projects = useSelector((state: RootState) => state.projects);
+const projects = useSelector((state: RootState) => state.projects.projects);
 
 const dispatch = useDispatch()
 
@@ -45,23 +42,6 @@ const dispatch = useDispatch()
       },
     ],
   };
-
-  useEffect(() => {
-    const getProjects = async () => {
-      try {
-        const res = await fetchAllProjects();
-        if (res && res.success) {
-          dispatch(setProjects(res.allProjects))
-        } else {
-          console.log("File can't be fetch.");
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getProjects();
-  }, []);
-
   return (
     <section className="flex justify-center flex-col bg-foreground p-8">
       <div className="max-w-7xl mx-auto">
@@ -88,11 +68,6 @@ const dispatch = useDispatch()
           <div>loading</div>
         )}
       </Slider>
-      {
-        projects.length > 0 ? projects.map((pro)=>(
-        <div>{pro}</div>
-        )) : <div>loading</div>
-      }
     </section>
   );
 }

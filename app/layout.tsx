@@ -25,9 +25,9 @@ export default function RootLayout({
           className={`${inter.className} overflow-y-scroll overflow-x-hidden font-sans text-primary min-h-screen flex flex-col`}
         >
           <Nav />
-
           <Theme />
           <div className="flex-grow mt-32">{children}</div>
+          <Footer />
         </body>
       </html>
     </StoreProvider>

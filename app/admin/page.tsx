@@ -1,13 +1,10 @@
-"use client"
-import { useParams } from "next/navigation";
-import React from "react";
 
+import Test from "./test";
 const AdminPage = () => {
-  const params = useParams();
-  console.log(params);
   return (
       
       <div className="bg-gray-100">
+        <Test/> 
       </div>
   );
 };
