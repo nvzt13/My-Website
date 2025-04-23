@@ -12,7 +12,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ProjectCardProps } from "@/type/types";
-import { createProject } from "@/actions/create-project";
 
 const AddProjectClient = () => {
   // Form state yönetimi
@@ -26,19 +25,7 @@ const AddProjectClient = () => {
 
   // Form gönderme fonksiyonu
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-
-    try {
-      const res = await createProject(formData); // Verileri backend'e gönder
-      if (res && res.status === 201) {
-        alert("Proje başarıyla eklendi");
-      } else {
-        alert("Proje eklenirken bir hata oluştu");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error); // Hata loglama
-    }
+    e.preventDefault()
   };
 
   // Tüm inputlar için state güncelleme

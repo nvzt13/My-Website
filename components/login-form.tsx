@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react"
+import * as React from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -14,28 +14,32 @@ import { Label } from "@/components/ui/label"
 import { useRouter } from "next/navigation"
 import { Loader2Icon } from "lucide-react"
 
-export function LoginForm({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"div">) {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [loading, setLoading] = useState(false)
+interface Admin {
+  email: any
+  password: any
+}
+export function LoginForm() {
+
   const router = useRouter()
+  const [formData, setFormData] = React.useState<Admin>({
+    email: "",
+    password: ""
+  })
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
     e.preventDefault()
-    setLoading(true)
-      if(email === "nevzatatalay79@gmail.com" && password === "123456"){
-        router.push('/admin')
-    setLoading(false)
-    }else {
-      alert("Invalid email or password")
-      setLoading(false)
-    }
-}
+    console.log(formData)
+  }
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div>
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Welcome back</CardTitle>
@@ -53,7 +57,7 @@ export function LoginForm({
                     id="email"
                     type="email"
                     placeholder="m@example.com"
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={ handleChange }
                     required
                   />
                 </div>
@@ -68,11 +72,12 @@ export function LoginForm({
                     </a>
                   </div>
                   <Input id="password"  
-                  onChange={(e) => setPassword(e.target.value)}
-                  type="password" required />
+                  onChange={ handleChange }
+                  type="password" required
+                  />
                 </div>
                 <Button type="submit" className="w-full">
-                  {loading ? <Loader2Icon className="animate-spin" /> : "Login"}
+                    Login
                   </Button>
               </div>
             </div>

@@ -5,15 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from "@/components/sub/ProjectCard";
 
-import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../lib/redux/store";
+import { useAppSelector } from "@/lib/redux/hooks";
 
 
 
 export default function Projects() {
-const projects = useSelector((state: RootState) => state.projects.projects);
-
-const dispatch = useDispatch()
+const projects = useAppSelector((state: RootState) => state.projects.projects);
 
   const settings = {
     dots: false,

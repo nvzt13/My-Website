@@ -3,8 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/main/Footer";
 import Nav from "@/components/main/Nav";
-import { StoreProvider } from "../lib/redux/StoreProvider";
+import StoreProvider  from "../components/StoreProvider";
 import Theme from "@/components/sub/Theme";
+import FillReduxStore from "@/components/FillReduxStore";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Theme />
           <div className="flex-grow mt-32">{children}</div>
           <Footer />
+          <FillReduxStore />
         </body>
       </html>
     </StoreProvider>

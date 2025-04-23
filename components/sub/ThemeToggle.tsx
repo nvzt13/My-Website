@@ -1,15 +1,14 @@
 "use client";
-import { useEffect, useState } from "react";
 import { RootState } from "../../lib/redux/store";
-import { useSelector, useDispatch } from "react-redux";
 import { changeTheme } from "../../lib/redux/themeSlice";
 import { FaMoon } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
+import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
 
 export default function ThemeToggle() {
   // Accessing 'isDark' from the Redux store
-  const isDark = useSelector((state: RootState) => state.theme.isDark);
-  const dispatch = useDispatch();
+  const isDark = useAppSelector((state: RootState) => state.theme.isDark);
+  const dispatch = useAppDispatch();
 
   const handleChangeTheme = () => {
     document.documentElement.classList.toggle("dark");
