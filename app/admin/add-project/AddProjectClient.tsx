@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,10 +12,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ProjectCardProps } from "@/type/types";
+import { useAppDispatch } from "@/lib/redux/hooks";
+import { createProject } from "@/lib/redux/projectSlice";
 
 const AddProjectClient = () => {
+  const dispatch = useAppDispatch();
   // Form state yönetimi
-  const [formData, setFormData] = useState<ProjectCardProps>({
+  const [formData, setFormData] = React.useState<ProjectCardProps>({
     title: "",
     address: "",
     technologies: "",
@@ -25,7 +28,9 @@ const AddProjectClient = () => {
 
   // Form gönderme fonksiyonu
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    console.log("Form submitted:", formData);
+    e.preventDefault();
+    dispatch(createProject(formData));
   };
 
   // Tüm inputlar için state güncelleme
@@ -37,16 +42,20 @@ const AddProjectClient = () => {
     }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setFormData((prev) => ({
-        ...prev,
-        file: file, // Store the file directly
-      }));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const { name } = e.target;
+        setFormData((prev) => ({
+          ...prev,
+          [name]: reader.result as string, // Tüm text inputlar için
+        }));
+      };
+      reader.readAsDataURL(file);
     }
   };
-
   return (
     <div className="container mx-auto p-6">
       <Card>
@@ -105,7 +114,7 @@ const AddProjectClient = () => {
                 name="file"
                 type="file"
                 accept="image/*"
-                onChange={handleFileChange} // Dosya için ayrı handleFileChange kullan
+                onChange={handleImageChange} // Dosya için ayrı handleFileChange kullan
               />
             </div>
 

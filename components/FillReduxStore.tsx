@@ -11,6 +11,7 @@ const FillReduxStore = () => {
     dispatch(fetchProjects());
   }, [dispatch]);
 
+  console.log("fillredux çalıştı")
 
   return (
     <div>

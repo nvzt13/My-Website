@@ -17,13 +17,8 @@ const SideBar = () => {
           </Link>
         </li>
         <li className="my-4">
-          <Link href="/admin/statistics" className="text-gray-100 no-underline">
-            İstatistikleri Gör
-          </Link>
-        </li>
-        <li className="my-4">
           <Link href="/admin/settings" className="text-gray-100 no-underline">
-            Settings
+            Logout
           </Link>
         </li>
       </ul>

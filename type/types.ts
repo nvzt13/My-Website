@@ -3,7 +3,7 @@ export interface ProjectCardProps {
   address: string;
   technologies: string;
   date: string;
-  file: string | undefined;
+  file?: string 
 }
 
 export interface ThemeState {

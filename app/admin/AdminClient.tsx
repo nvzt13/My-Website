@@ -1,5 +1,6 @@
 "use client";
-import { useAppSelector } from '@/lib/redux/hooks';
+import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
+import { deleteProject } from '@/lib/redux/projectSlice';
 import { RootState } from '@/lib/redux/store';
 import {
   Table, TableBody, TableCell, TableContainer,
@@ -8,16 +9,11 @@ import {
 
 const AdminClient = () => {
   const projects = useAppSelector((state: RootState) => state.projects.projects);
-
-  const handleEdit = (id: string) => {
-    console.log("Düzenle:", id);
-    // burada düzenleme için routing ya da modal açabilirsin
-  };
-
+  const dispatch = useAppDispatch();
   const handleDelete = (id: string) => {
     console.log("Sil:", id);
-    // burada silme işlemini başlatabilirsin
-  };
+    dispatch(deleteProject(id));  
+  }
 
   return (
     <TableContainer component={Paper}>
@@ -33,9 +29,6 @@ const AdminClient = () => {
             <TableRow key={proje.id}>
               <TableCell>{proje.title}</TableCell>
               <TableCell>
-                <Button variant="contained" color="primary" onClick={() => handleEdit(proje.id)} sx={{ mr: 1 }}>
-                  Düzenle
-                </Button>
                 <Button variant="contained" color="error" onClick={() => handleDelete(proje.id)}>
                   Sil
                 </Button>
