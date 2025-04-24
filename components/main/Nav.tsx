@@ -72,7 +72,7 @@ const Nav = () => {
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
             <ThemeToggle />
-            <Link href="/login">Login</Link>
+            <Link href="/admin">Login</Link>
           </div>
         </div>
       </nav>

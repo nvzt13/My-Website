@@ -6,14 +6,14 @@ export const handlers = {
     const projects = await ProjectService.getAll();
     return NextResponse.json(projects);
   },
-  /*
  
   POST: async (req: NextRequest) => {
     const data = await req.json()
     const project = await ProjectService.create(data)
     return NextResponse.json(project, { status: 201 })
-  },
+  }
 
+  /*
   PUT: async (req: NextRequest) => {
     const data = await req.json()
     const updated = await ProjectService.update(data)

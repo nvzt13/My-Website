@@ -36,7 +36,7 @@ export function LoginForm() {
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
     e.preventDefault()
-    console.log(formData)
+    router.push('/admin')
   }
   return (
     <div>
