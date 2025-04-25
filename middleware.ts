@@ -1,19 +1,21 @@
-// middleware.ts
+import { jwtVerify } from 'jose';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
-  const token = request.cookies.get('token')?.value;
+const secret = new TextEncoder().encode(process.env.JWT_SECRET!);
 
-  // Eğer token varsa ve /signin sayfasına gidiyorsa, dashboard'a yönlendir
-  if (token && request.nextUrl.pathname === '/signin') {
-    return NextResponse.redirect(new URL('/dashboard', request.url));
+export async function middleware(req: NextRequest) {
+  const token = req.cookies.get('token')?.value;
+
+  if (!token) {
+    return NextResponse.redirect(new URL('/login', req.url));
   }
 
-  return NextResponse.next();
+  try {
+    await jwtVerify(token, secret); // decode işlemi burada
+    return NextResponse.next();
+  } catch (err) {
+    console.error('Token doğrulama hatası:', err);
+    return NextResponse.redirect(new URL('/login', req.url));
+  }
 }
-
-// middleware’in çalışacağı yollar
-export const config = {
-  matcher: ['/login'], // sadece signin sayfasında çalışsın
-};

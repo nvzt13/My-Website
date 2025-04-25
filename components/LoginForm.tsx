@@ -15,14 +15,14 @@ import { useRouter } from "next/navigation"
 import { Loader2Icon } from "lucide-react"
 
 interface Admin {
-  email: any
-  password: any
+  userName: string
+  password: string
 }
 export function LoginForm() {
 
   const router = useRouter()
   const [formData, setFormData] = React.useState<Admin>({
-    email: "",
+    userName: "",
     password: ""
   })
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,11 +32,24 @@ export function LoginForm() {
       [name]: value,
     });
   };
-
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-
     e.preventDefault()
-    router.push('/admin')
+    try{
+      const res = await fetch('/api/admin',{
+      method:"POST",
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(formData)
+    })
+  if (res.ok) {
+  router.push("/admin");
+}
+    }catch(error){
+      console.log(error)
+    }
+    console.log(formData)
   }
   return (
     <div>
@@ -52,14 +65,15 @@ export function LoginForm() {
             <div className="grid gap-6">
               <div className="grid gap-6">
                 <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="m@example.com"
-                    onChange={ handleChange }
-                    required
-                  />
+                  <Label htmlFor="userName">User Name</Label>
+                <Input
+  id="userName"
+  name="userName" // eklenen kısım
+  type="text"
+  placeholder="user name"
+  onChange={handleChange}
+  required
+/>
                 </div>
                 <div className="grid gap-2">
                   <div className="flex items-center">
@@ -71,10 +85,14 @@ export function LoginForm() {
                       Forgot your password?
                     </a>
                   </div>
-                  <Input id="password"  
-                  onChange={ handleChange }
-                  type="password" required
-                  />
+<Input
+  id="password"
+  name="password" // eklenen kısım
+  type="password"
+  placeholder="password"
+  onChange={handleChange}
+  required
+/>
                 </div>
                 <Button type="submit" className="w-full">
                     Login

@@ -29,7 +29,6 @@ export default function RootLayout({
           <Theme />
           <div className="flex-grow mt-32">{children}</div>
           <Footer />
-          <FillReduxStore />
         </body>
       </html>
     </StoreProvider>
