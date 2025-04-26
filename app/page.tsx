@@ -5,7 +5,7 @@ import Progress from "@/components/main/Progress";
 
 export default function Home() {
   return (
-    <main className="mx-auto my-12 overflow-hidden text-primary opacity-90">
+    <main className="mx-auto my-12 overflow-hidden text-primary">
       <div className="flex flex-col">
         <WelcomeSection />
         <Skills />

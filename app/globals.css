@@ -55,75 +55,67 @@ section {
 
 @layer base {
   :root {
-    --background: 213.3 96.9% 87.3%;
-    --foreground: 188.7 94.5% 42.7%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 346.8 77.2% 49.8%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.5rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Arka Plan Renkleri */
+    --background: 220 60% 96%;    /* Hafif mavi-gri arka plan */
+    --card: 0 0% 100%;             /* Beyaz kart */
+    --popover: 220 40% 98%;        /* Karttan biraz daha soluk */
+    --input: 220 60% 95%;          /* Açık mavi-gri input */
+  
+    /* Yazı Renkleri */
+    --foreground: 220 25% 15%;     /* Koyu mavi (başlıklar için) */
+    --card-foreground: 220 15% 25%;/* Normal yazılar */
+    --popover-foreground: 220 10% 30%; /* Popover içi yazılar */
+  
+    /* Diğer Temel Renkler */
+    --primary: 245 58% 55%;        /* Morumsu bir ana renk */
+    --primary-foreground: 0 0% 100%; /* Primary üzerine beyaz yazı */
+    
+    --secondary: 180 55% 45%;      /* Mavi-yeşil ikinci renk */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 220 40% 92%;          /* Soluk gri */
+    --muted-foreground: 220 20% 40%; /* Soluk yazı */
+  
+    --accent: 48 94% 68%;          /* Altın sarısı vurgular */
+    --accent-foreground: 0 0% 15%;
+  
+    --destructive: 0 80% 60%;      /* Kırmızı hata */
+    --destructive-foreground: 0 0% 100%;
+  
+    --border: 220 20% 85%;         /* Soft border */
+    --ring: 220 20% 70%;           /* Focus halkası */
   }
-
+  
   .dark {
-    --background: 217.2 32.6% 17.5%;
-    --foreground: 222.2 47.4% 11.2%;
-    --card: 240 10% 13.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode renkler */
+    --background: 220 40% 10%;
+    --card: 220 25% 14%;
+    --popover: 220 30% 12%;
+    --input: 220 30% 14%;
+  
+    --foreground: 220 20% 90%;
+    --card-foreground: 220 15% 80%;
+    --popover-foreground: 220 10% 70%;
+  
+    --primary: 245 58% 65%;
+    --primary-foreground: 0 0% 100%;
+  
+    --secondary: 180 45% 50%;
+    --secondary-foreground: 0 0% 100%;
+  
+    --muted: 220 30% 20%;
+    --muted-foreground: 220 15% 60%;
+  
+    --accent: 48 94% 58%;
+    --accent-foreground: 0 0% 10%;
+  
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 100%;
+  
+    --border: 220 15% 20%;
+    --ring: 220 20% 40%;
   }
+  
 }
 
 @layer base {

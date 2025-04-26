@@ -1,35 +1,59 @@
 "use client";
+
 import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
 import { deleteProject } from '@/lib/redux/projectSlice';
 import { RootState } from '@/lib/redux/store';
+import { Button } from "@/components/ui/button";
 import {
-  Table, TableBody, TableCell, TableContainer,
-  TableHead, TableRow, Paper, Button
-} from '@mui/material';
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Card } from "@/components/ui/card";
 
 const AdminClient = () => {
   const projects = useAppSelector((state: RootState) => state.projects.projects);
   const dispatch = useAppDispatch();
+
   const handleDelete = (id: string) => {
     console.log("Sil:", id);
-    dispatch(deleteProject(id));  
-  }
+    dispatch(deleteProject(id));
+  };
+
+  const handleEdit = (id: string) => {
+    console.log("Düzenle:", id);
+    // düzenleme işlemleri burada olabilir
+  };
 
   return (
-    <TableContainer component={Paper}>
+    <Card className="mt-6 p-6">
       <Table>
-        <TableHead>
+        <TableHeader>
           <TableRow>
-            <TableCell>Proje Başlığı</TableCell>
-            <TableCell>İşlemler</TableCell>
+            <TableHead>Proje Başlığı</TableHead>
+            <TableHead>İşlemler</TableHead>
           </TableRow>
-        </TableHead>
+        </TableHeader>
         <TableBody>
           {projects.map((proje) => (
             <TableRow key={proje.id}>
               <TableCell>{proje.title}</TableCell>
-              <TableCell>
-                <Button variant="contained" color="error" onClick={() => handleDelete(proje.id)}>
+              <TableCell className="flex gap-2">
+                <Button
+                  variant="default"
+                  size="sm"
+                  onClick={() => handleEdit(proje.id)}
+                >
+                  Düzenle
+                </Button>
+                <Button
+                  variant="destructive"
+                  size="sm"
+                  onClick={() => handleDelete(proje.id)}
+                >
                   Sil
                 </Button>
               </TableCell>
@@ -37,7 +61,7 @@ const AdminClient = () => {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </Card>
   );
 };
 

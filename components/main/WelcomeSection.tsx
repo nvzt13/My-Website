@@ -7,7 +7,7 @@ import {Button} from "../ui/button";
 
 const WelcomeSection = () => {
   return (
-    <section className="mt-20 flex flex-col items-center justify-center relative overflow-hidden bg-background p-2">
+    <section className="flex flex-col items-center justify-center relative overflow-hidden bg-secondary p-2">
       <div className="text-center w-full relative z-20 ">
         <motion.h1
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 w-full"

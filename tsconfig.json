@@ -28,7 +28,6 @@
       "react-dom",
       "react-reconciler",
       "react-slick",
-      "react-transition-group",
       "three",
       "webxr"
     ]
