@@ -1,16 +1,19 @@
-import Projects from "@/components/main/Projects";
-import Skills from "@/components/main/Skills";
-import WelcomeSection from "@/components/main/WelcomeSection";
-import Progress from "@/components/main/Progress";
+import TestimonialsSections from "@/components/layout/TestimonialsSections";
+import Skills from "@/components/layout/Services";
+import WelcomeSection from "@/components/layout/WelcomeSection";
+import Success from "@/components/layout/Success";
+import Hizmetler from "@/components/Hizmetler";
+import Gallery from "@/components/layout/Gallery";
 
 export default function Home() {
   return (
-    <main className="mx-auto my-12 overflow-hidden text-primary">
+    <main className="mx-auto overflow-hidden text-primary">
       <div className="flex flex-col">
         <WelcomeSection />
         <Skills />
-        <Progress />
-        <Projects />
+        <TestimonialsSections />
+        <Success />
+        <Gallery />
       </div>
     </main>
   );

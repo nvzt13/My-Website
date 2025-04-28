@@ -43,8 +43,8 @@ const Nav = () => {
   }, [isOpen]);
 
   return (
-    <header className="fixed w-full h-auto shadow-lg top-0 shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-3xl z-50 transition-all duration-300 ease-in-out py-4">
-      <nav className="max-w-[100rem] w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between">
+    <header className="fixed w-full h-auto top-0  z-50">
+      <nav className="max-w-7xl w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between p-4 bg-background">
         <div className="flex items-center justify-between w-full">
           <Link href="/" className="text-3xl font-bold text-primary">
             Nevzat Atalay
