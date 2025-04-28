@@ -31,20 +31,6 @@
   animation: rolling 10s linear infinite;
 }
 
-section {
-  width: 100%; /* Make sure it takes full available width */
-  max-width: 768px; /* Limit the maximum width */
-  min-height: 768px; /* Ensure a minimum height */
-  margin: 0 auto; /* Center the section horizontally */
-}
-
-/* Responsive for smaller screens */
-@media screen and (max-width: 768px) {
-  section {
-    max-width: 100%; /* Full width on smaller screens */
-    min-height: auto; /* Remove min-height on smaller screens if needed */
-  }
-}
 
 /* For very small screens, like mobile phones */
 @media screen and (max-width: 480px) {
