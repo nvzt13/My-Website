@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
   <StoreProvider>
     <html lang="en">
-<body className={`${inter.className} overflow-y-scroll overflow-x-hidden min-h-screen flex flex-col bg-gradient-to-r from-gray-100 to-sky-500 dark:bg-gradient-to-r dark:from-[#030014] dark:to-[#000]`}>
+<body className={`${inter.className} overflow-y-scroll overflow-x-hidden bg-gradient-to-r from-gray-100 to-sky-500 dark:bg-gradient-to-r dark:from-[#030014] dark:to-[#000]`}>
   <Nav />
   <Theme />
   <div className="flex-grow">{children}</div>

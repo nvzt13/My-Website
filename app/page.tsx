@@ -1,7 +1,10 @@
 import Projects from "@/components/main/Projects";
-import Skills from "@/components/main/Skills";
+import Skills from "@/components/main/Services";
 import WelcomeSection from "@/components/main/WelcomeSection";
-import Progress from "@/components/main/Progress";
+import Progress from "@/components/main/Portfolio";
+import About from "@/components/main/About";
+import BlogSection from "@/components/main/Blogs";
+import Form from "@/components/main/Form";
 
 export default function Home() {
 
@@ -11,6 +14,9 @@ export default function Home() {
         <WelcomeSection />
         <Skills />
         <Progress />
+        <About />
+        <BlogSection />
+        <Form />
         <Projects />
       </div>
     </main>

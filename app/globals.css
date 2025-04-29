@@ -34,7 +34,6 @@
 section {
   width: 100%; /* Make sure it takes full available width */
   max-width: 768px; /* Limit the maximum width */
-  min-height: 768px; /* Ensure a minimum height */
   margin: 0 auto; /* Center the section horizontally */
 }
 

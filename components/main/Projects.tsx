@@ -38,11 +38,6 @@ export default function Projects() {
   return (
     <section className="flex justify-center flex-col opacity-90">
       <div className="mb-24">
-      <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-dark dark:text-gray-100">
-        My Projects
-      </h2>
-      <hr className="w-24 border-b-2 border-dark dark:border-light mb-6 mx-auto"/>
-
       </div>
       {/* Slider öğeleri arasındaki boşlukları optimize ettik */}
       <Slider {...settings} className="mx-auto max-w-full sm:max-w-[768px]">

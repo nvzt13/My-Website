@@ -6,67 +6,57 @@ import { motion } from 'framer-motion';
 
 const WelcomeSection = () => {
   return (
-    <section className="h-[760px] my-8 flex flex-col items-center justify-center bg-gradient-to-r dark:from-gray-800 dark:to-gray-900 opacity-90 relative overflow-hidden">
-      <div className="text-center text-dark w-full relative z-20">
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 bg-[#f4f7fe] dark:bg-gray-900 mt-12 max-w-7xl mx-auto shadow-lg bg-gradient-to-r from-[#eff4ff] to-[#55bded]">
+      {/* Sol taraf (Yazı ve butonlar) */}
+      <div className="md:w-1/2 text-center md:text-left">
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-snug mb-6 dark:text-gray-100 w-full drop-shadow-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          Welcome to My Website, I am
+          Web Tasarım ve <br /> Yazılım Çözümleri
         </motion.h1>
-        <motion.h2
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl dark:text-gray-100 font-sans font-extrabold w-full text-dark animate-pulse"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          Nevzat Atalay
-        </motion.h2>
-      </div>
 
-      {/* Subheading and Button */}
-      <div className="w-full flex flex-col items-center justify-center mt-5 max-w-[400px] mx-auto mt-8 relative z-20">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <Image 
-            src="/me.jpg"
-            alt="me"
-            width={200}  // Responsive width
-            height={200} // Responsive height
-            className="w-[250px] h-[250px] sm:w-[200px] sm:h-[200px] rounded-full object-cover object-[50%_40%] z-10 mb-8 border-4 border-indigo-700 dark:border-white shadow-lg"
-          />
-        </motion.div>
         <motion.p
-          className="text-2xl sm:text-2xl lg:text-3xl dark:text-gray-300 font-semibold text-center mb-6 transform transition-all duration-500 ease-in-out hover:text-indigo-400"
+          className="text-gray-700 dark:text-gray-300 text-lg mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
+          transition={{ duration: 1, delay: 0.3 }}
         >
-          A Passionate Web Developer <span className="text-indigo-500">Bringing Ideas to Life</span>
+          Kişisel ve kurumsal web sitelerinden e-ticaret çözümlerine kadar profesyonel dijital hizmetler.
         </motion.p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <Link
+            href="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow transition duration-300"
+          >
+            İletişime Geç
+          </Link>
+          <Link
+            href="/services"
+            className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-md shadow transition duration-300"
+          >
+            Hizmetlerimiz
+          </Link>
+        </div>
       </div>
 
-      {/* Divider line */}
-      <div className="w-full max-w-[400px] mx-auto relative z-20">
-        <hr className="border-t-2 border-dark dark:border-light mb-6" />
-      </div>
-
+      {/* Sağ taraf (Görsel) */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1 }}
+        className="md:w-1/2 mt-10 md:mt-0 flex justify-center"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
       >
-        <Link 
-          href="/contact" 
-          className="text-center absolute left-0 bottom-0 w-20 h-20 sm:w-40 sm:h-40  bg-gradient-to-r from-indigo-600 to-sky-500 dark:from-gray-800 dark:to-gray-900 text-white rounded-full opacity-90 z-50 flex items-center justify-center text-sm sm:text-2xl font-semibold shadow-xl transform transition-all duration-500 hover:scale-110 hover:opacity-100 animate-bounce border-2 border-indigo-600 dark:border-indigo-400"
-        >
-          Contact me
-        </Link>
+        <Image
+          src="https://plus.unsplash.com/premium_photo-1720287601013-69bed792f481?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3wzfHx8ZW58MHx8fHx8" // Buraya uygun görseli koymalısın
+          alt="Web Illustration"
+          width={500}
+          height={400}
+          className="rounded-lg shadow-lg"
+        />
       </motion.div>
     </section>
   );

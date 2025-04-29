@@ -1,40 +1,53 @@
 import React from "react";
-import Link from "next/link";
-import { RxGithubLogo, RxTwitterLogo, RxLinkedinLogo } from "react-icons/rx";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="dark:text-light relative bottom-0 w-full h-auto shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-lg z-50 transition-all duration-300 ease-in-out py-6">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
-        <div className="flex flex-row space-x-8 mb-6">
-          <Link
-            href="https://x.com/nvzt_atly"
-            className="flex items-center text-lg hover:text-blue-400 transition-all duration-300 group"
-            target="_blank"
-          >
-            <RxTwitterLogo className="text-3xl group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-base ml-3 group-hover:underline">Twitter</span>
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/nevzat-atalay-6b5164335/"
-            className="flex items-center text-lg hover:text-blue-600 transition-all duration-300 group"
-            target="_blank"
-          >
-            <RxLinkedinLogo className="text-3xl group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-base ml-3 group-hover:underline">LinkedIn</span>
-          </Link>
-          <Link
-            href="https://github.com/nvzt13"
-            className="flex items-center text-lg hover:text-blue-400 transition-all duration-300 group"
-            target="_blank"
-          >
-            <RxGithubLogo className="text-3xl group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-base ml-3 group-hover:underline">GitHub</span>
-          </Link>
+    <footer className="bg-gray-100 text-gray-700 py-10 border-t">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+        
+        {/* Marka */}
+        <div>
+          <h3 className="font-bold text-lg mb-2">Nevzat</h3>
+          <p>Profesyonel web tasarım ve yazılım hizmetleri.</p>
         </div>
-        <div className="text-sm text-center text-dark dark:text-light">
-          &copy; Nevzat Atalay 2024
-                  </div>
+
+        {/* Hizmetler */}
+        <div>
+          <h4 className="font-semibold mb-2">Hizmetler</h4>
+          <ul className="space-y-1">
+            <li><a href="#" className="hover:text-blue-600">Kişisel Web Sitesi</a></li>
+            <li><a href="#" className="hover:text-blue-600">Kurumsal Web Sitesi</a></li>
+            <li><a href="#" className="hover:text-blue-600">E-Ticaret Sitesi</a></li>
+          </ul>
+        </div>
+
+        {/* Bağlantılar */}
+        <div>
+          <h4 className="font-semibold mb-2">Hızlı Bağlantılar</h4>
+          <ul className="space-y-1">
+            <li><a href="#" className="hover:text-blue-600">Portfolyo</a></li>
+            <li><a href="#" className="hover:text-blue-600">Hakkımda</a></li>
+            <li><a href="#" className="hover:text-blue-600">Blog</a></li>
+          </ul>
+        </div>
+
+        {/* İletişim */}
+        <div>
+          <h4 className="font-semibold mb-2">İletişim</h4>
+          <ul className="space-y-1">
+            <li className="flex items-center gap-2">
+              <FaEnvelope /> info@nevzat.com
+            </li>
+            <li className="flex items-center gap-2">
+              <FaPhone /> +90 555 123 4567
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="text-center text-xs text-gray-500 mt-10 border-t pt-4">
+        © 2025 Nevzat. Tüm hakları saklıdır.
       </div>
     </footer>
   );

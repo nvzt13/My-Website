@@ -1,0 +1,58 @@
+import React from "react";
+
+const blogPosts = [
+  {
+    title: "2025 Web Tasarım Trendleri",
+    description: "Modern web tasarımında öne çıkan trendler ve kullanıcı deneyimi yaklaşımları.",
+    image: "https://via.placeholder.com/300x200", // Görsel URL’sini değiştirin
+    link: "#"
+  },
+  {
+    title: "E-Ticaret Çözümleri",
+    description: "Online mağazanızı başarıya taşıyacak temel e-ticaret stratejileri.",
+    image: "https://via.placeholder.com/300x200",
+    link: "#"
+  },
+  {
+    title: "SEO Optimizasyonu",
+    description: "Web sitenizi arama motorlarında üst sıralara taşıyacak SEO ipuçları.",
+    image: "https://via.placeholder.com/300x200",
+    link: "#"
+  },
+];
+
+const BlogSection = () => {
+  return (
+    <section className="bg-gray-50 py-12 px-6 text-center max-w-7xl mx-auto shadow-lg">
+    <div className="bg-gray-50 py-12 px-6 text-center max-w-7xl mx-auto shadow-lg px-4 sm:px-6 lg:px-12">
+      <h2 className="text-2xl font-bold text-gray-800 mb-1">Blog</h2>
+      <p className="text-gray-500 mb-10">Son Yazılar ve Güncellemeler</p>
+
+      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {blogPosts.map((post, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-left"
+          >
+            <img
+              src={post.image}
+              alt={post.title}
+              className="rounded-lg mb-4 h-40 w-full object-cover"
+            />
+            <h3 className="font-semibold text-lg text-gray-800 mb-2">{post.title}</h3>
+            <p className="text-gray-600 text-sm mb-4">{post.description}</p>
+            <a
+              href={post.link}
+              className="text-blue-600 hover:underline text-sm font-medium"
+            >
+              Devamını Oku →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+    </section>
+  );
+};
+
+export default BlogSection;
