@@ -23,8 +23,8 @@ const blogPosts = [
 
 const BlogSection = () => {
   return (
-    <section className="bg-gray-50 py-12 px-6 text-center max-w-7xl mx-auto shadow-lg">
-    <div className="bg-gray-50 py-12 px-6 text-center max-w-7xl mx-auto shadow-lg px-4 sm:px-6 lg:px-12">
+    <section className="bg-gradient-to-r from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-6 text-center max-w-7xl mx-auto shadow-lg">
+    <div className="py-12 px-6 text-center max-w-7xl mx-auto shadow-lg px-4 sm:px-6 lg:px-12">
       <h2 className="text-2xl font-bold text-gray-800 mb-1">Blog</h2>
       <p className="text-gray-500 mb-10">Son Yazılar ve Güncellemeler</p>
 

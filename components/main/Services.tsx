@@ -6,18 +6,21 @@ import { FaUser, FaBuilding, FaShoppingCart } from 'react-icons/fa';
 
 const services = [
   {
+    id:"kisisel-web-sitesi",
     title: 'Kişisel Web Sitesi',
     description:
       'Profesyonel kimliğinizi yansıtan, modern ve etkileyici kişisel web siteleri.',
     icon: <FaUser size={40} className="text-blue-600" />,
   },
   {
+    id:"kurumsal-web-sitesi",
     title: 'Kurumsal Web Sitesi',
     description:
       'Kurumsal kimliğinizi güçlendiren, profesyonel ve kullanıcı dostu web siteleri.',
     icon: <FaBuilding size={40} className="text-blue-600" />,
   },
   {
+    id:"e-ticaret-sitesi",
     title: 'E-Ticaret Sitesi',
     description:
       'Online satış için optimize edilmiş, güvenli ve kullanıcı dostu e-ticaret çözümleri.',
@@ -27,7 +30,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-16 dark:bg-gray-900 max-w-7xl mx-auto shadow-lg bg-[#f9fafb]">
+    <section id="services" className="py-16 dark:bg-gray-900 max-w-7xl mx-auto shadow-lg bg-[#f9fafb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık */}
         <motion.h2
@@ -66,7 +69,7 @@ const Services = () => {
                 {service.description}
               </p>
               <a
-                href="#"
+                href={`/services/${service.id}`}
                 className="text-blue-600 hover:underline flex items-center gap-1 font-medium"
               >
                 Detaylı Bilgi →

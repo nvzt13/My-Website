@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const WelcomeSection = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 bg-[#f4f7fe] dark:bg-gray-900 mt-12 max-w-7xl mx-auto shadow-lg bg-gradient-to-r from-[#eff4ff] to-[#55bded]">
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 bg-gradient-to-r from-[#eff4ff] to-[#55bded] dark:from-gray-900 dark:to-gray-800 mt-12 max-w-7xl mx-auto shadow-lg">
       {/* Sol taraf (Yazı ve butonlar) */}
       <div className="md:w-1/2 text-center md:text-left">
         <motion.h1
@@ -29,14 +29,14 @@ const WelcomeSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <Link
-            href="/contact"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow transition duration-300"
+            href="#contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow transition duration-300 dark:bg-blue-500 dark:hover:bg-blue-600"
           >
             İletişime Geç
           </Link>
           <Link
-            href="/services"
-            className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-md shadow transition duration-300"
+            href="#services"
+            className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-md shadow transition duration-300 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-500 dark:hover:text-white"
           >
             Hizmetlerimiz
           </Link>
@@ -51,7 +51,7 @@ const WelcomeSection = () => {
         transition={{ duration: 1 }}
       >
         <Image
-          src="https://plus.unsplash.com/premium_photo-1720287601013-69bed792f481?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3wzfHx8ZW58MHx8fHx8" // Buraya uygun görseli koymalısın
+          src="https://plus.unsplash.com/premium_photo-1720287601013-69bed792f481?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3wzfHx8ZW58MHx8fHx8"
           alt="Web Illustration"
           width={500}
           height={400}

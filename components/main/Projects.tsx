@@ -36,7 +36,9 @@ export default function Projects() {
   };
 
   return (
-    <section className="flex justify-center flex-col opacity-90">
+    <section className="py-16 dark:bg-gray-900 flex flex-col items-center max-w-7xl mx-auto shadow-lg  px-4 sm:px-6 lg:px-12 bg-gray-100">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 dark:text-white mb-2">Projeler</h2>
+      <p className="text-gray-600 dark:text-gray-300 text-center mb-10">Başarıyla tamamladığımız projeler</p>
       <div className="mb-24">
       </div>
       {/* Slider öğeleri arasındaki boşlukları optimize ettik */}

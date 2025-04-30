@@ -113,7 +113,62 @@ export const projectData = [
 ]
   
   
-  
+export const servicesData = [
+  {
+    id: 'kisisel-web-sitesi',
+    title: 'Kişisel Web Sitesi',
+    description:
+      'Kendinizi en iyi şekilde ifade edebileceğiniz, profesyonel kimliğinizi ve yeteneklerinizi yansıtan kişisel web siteleri tasarlıyorum.',
+    features: [
+      'Mobil uyumlu, modern tasarım',
+      'Kişisel blog veya portföy bölümü',
+      'Hakkımda ve iletişim sayfaları',
+      'SEO uyumlu altyapı',
+      'Hızlı ve güvenli yayın',
+    ],
+    targetAudience: [
+      'Freelance çalışanlar',
+      'Uzmanlık alanını sergilemek isteyenler',
+      'CV ve portföy sunmak isteyen profesyoneller',
+    ],
+  },
+  {
+    id: 'kurumsal-web-sitesi',
+    title: 'Kurumsal Web Sitesi',
+    description:
+      'Markanızın dijital vitrinini oluşturuyorum. Güven veren, kullanıcı dostu ve profesyonel kurumsal web siteleri ile müşterilerinize değer katın.',
+    features: [
+      'Kurumsal kimliğe uygun özel tasarım',
+      'Hakkımızda, hizmetler, iletişim sayfaları',
+      'Teklif/başvuru formları',
+      'Çoklu dil desteği (isteğe bağlı)',
+      'SEO ve performans optimizasyonu',
+    ],
+    targetAudience: [
+      'Küçük ve orta ölçekli işletmeler',
+      'Yeni kurulan girişimler',
+      'Dijitalde profesyonel görünmek isteyen firmalar',
+    ],
+  },
+  {
+    id: 'e-ticaret-sitesi',
+    title: 'E-Ticaret Sitesi',
+    description:
+      'Online satışa başlamak ya da mevcut satışlarınızı artırmak istiyorsanız, size özel, güvenli ve kullanıcı dostu e-ticaret çözümleri sunuyorum.',
+    features: [
+      'Ürün yönetimi ve stok takibi',
+      'Sepet, ödeme ve kargo entegrasyonları',
+      'Güvenli ödeme sistemleri (iyzico, Stripe, vs.)',
+      'Kampanya, kupon ve blog altyapısı',
+      'Yönetici paneli ile kolay kullanım',
+    ],
+    targetAudience: [
+      'Kendi ürünlerini satmak isteyen girişimciler',
+      'Fiziksel mağazasını dijitale taşımak isteyen esnaflar',
+      'Kapsamlı bir dijital mağaza isteyen KOBİ\'ler',
+    ],
+  },
+];
   
   
   

@@ -13,11 +13,10 @@ export default function Home() {
       <div className="flex flex-col">
         <WelcomeSection />
         <Skills />
-        <Progress />
         <About />
         <BlogSection />
-        <Form />
         <Projects />
+        <Form />
       </div>
     </main>
   );
