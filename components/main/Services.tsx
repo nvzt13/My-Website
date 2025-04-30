@@ -69,7 +69,7 @@ const Services = () => {
                 {service.description}
               </p>
               <a
-                href={`/services/${service.id}`}
+                href={`/hizmetler/${service.id}`}
                 className="text-blue-600 hover:underline flex items-center gap-1 font-medium"
               >
                 Detaylı Bilgi →

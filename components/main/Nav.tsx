@@ -4,11 +4,15 @@ import { GrMenu } from "react-icons/gr";
 import { FiX } from "react-icons/fi"; // Menu toggle icons
 
 import ThemeToggle from '../sub/ThemeToggle';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);  // Specify the type for the state
   const menuRef = useRef<HTMLDivElement | null>(null);  // Reference to the menu container, specifying the type
   const buttonRef = useRef<HTMLButtonElement | null>(null);  // Reference to the menu button, specifying the type
+
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -37,35 +41,54 @@ const Nav = () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, [isOpen]);
-
+  const navItems = [
+    { label: 'Ana Sayfa', href: '/' },
+    { label: 'Hizmetler', href: '#services' },    // bu da belki `/services`?
+    { label: 'Hakkımızda', href: '#about' },
+    { label: 'Blog', href: '#blog' },         // muhtemelen `/blog` olmalı?
+    { label: 'Projeler', href: '#works' },
+    { label: 'İletişim', href: '#contact' },
+  ];
   return (
-    <header className="w-full h-auto shadow-lg top-0 shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-3xl z-50 transition-all duration-300 ease-in-out py-4">
+    <header className="bg-gray-100 dark:bg-gray-900 w-full h-auto shadow-lg top-0 py-4 fixed z-50">
       <nav className="max-w-[100rem] w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between w-full">
-          <a
+          <Link
             href="/"
-            className="text-3xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-600 hover:bg-gradient-to-l transition-transform duration-300 ease-in-out hover:scale-110 shadow-md hover:shadow-purple-500/50"
+            className="text-3xl"
           >
-            Nevzat Atalay
-          </a>
+            Web13
+          </Link>
           {/* Mobile menu button */}
           <button 
             ref={buttonRef} 
             onClick={toggleMenu} 
             className="sm:hidden text-3xl text-gray-200 dark:text-white transition-transform duration-300 ease-in-out hover:scale-110 focus:outline-none"
           >
-            {isOpen ? <FiX /> : <GrMenu />} {/* Icon changes based on open/close state */}
+{isOpen ? (
+  <FiX className="text-black dark:text-white" />
+) : (
+  <GrMenu className="text-black dark:text-white" />
+)}
           </button>
         </div>
 
         <div ref={menuRef} className={`${isOpen ? 'block' : 'hidden'} w-full sm:flex sm:items-center sm:justify-end transition-all duration-500 ease-in-out text-[#000]`}>
           <div className="flex flex-col gap-6 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5 mx-auto">
-            <a className="text-xl font-bold dark:text-gray-300 hover:text-white dark:hover:text-blue-500 focus:outline-none focus:text-indigo-400 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-indigo-600 pb-1 transform hover:scale-105 hover:opacity-90" href="/">Ana Sayfa</a>
-            <a className="text-xl font-bold dark:text-gray-300 hover:text-white dark:hover:text-blue-500 focus:outline-none focus:text-indigo-400 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-indigo-600 pb-1 transform hover:scale-105 hover:opacity-90" href="/works">Projeler</a>
-            <a className="text-xl font-bold dark:text-gray-300 hover:text-white dark:hover:text-blue-500 focus:outline-none focus:text-indigo-400 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-indigo-600 pb-1 transform hover:scale-105 hover:opacity-90" href="/about">Hakkımızda</a>
-                        <a className="text-xl font-bold dark:text-gray-300 hover:text-white dark:hover:text-blue-500 focus:outline-none focus:text-indigo-400 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-indigo-600 pb-1 transform hover:scale-105 hover:opacity-90" href="/contact">Blog</a>
-                                    <a className="text-xl font-bold dark:text-gray-300 hover:text-white dark:hover:text-blue-500 focus:outline-none focus:text-indigo-400 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-indigo-600 pb-1 transform hover:scale-105 hover:opacity-90" href="/contact">Hizmetler</a>
-            <a className="text-xl font-bold dark:text-gray-300 hover:text-white dark:hover:text-blue-500 focus:outline-none focus:text-indigo-400 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-indigo-600 pb-1 transform hover:scale-105 hover:opacity-90" href="/contact">İletişim</a>
+          {navItems.map(({ label, href }) => (
+        <Link
+          key={label}
+          href={href}
+          className={`
+            text-xl font-medium transition-colors
+            ${pathname === href
+              ? 'text-indigo-600 dark:text-blue-400'
+              : 'text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-blue-400'}
+          `}
+        >
+          {label}
+        </Link>
+      ))}
             <ThemeToggle />
           </div>
         </div>

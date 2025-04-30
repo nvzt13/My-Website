@@ -9,7 +9,7 @@ import Form from "@/components/main/Form";
 export default function Home() {
 
   return (
-    <main className="mx-auto overflow-hidden ">
+    <main className="mx-auto overflow-hidden my-12 ">
       <div className="flex flex-col">
         <WelcomeSection />
         <Skills />

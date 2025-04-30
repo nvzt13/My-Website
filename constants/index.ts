@@ -117,6 +117,7 @@ export const servicesData = [
   {
     id: 'kisisel-web-sitesi',
     title: 'Kişisel Web Sitesi',
+    image:"https://images.unsplash.com/photo-1642132652860-603f4e3c19b7?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       'Kendinizi en iyi şekilde ifade edebileceğiniz, profesyonel kimliğinizi ve yeteneklerinizi yansıtan kişisel web siteleri tasarlıyorum.',
     features: [
@@ -135,6 +136,7 @@ export const servicesData = [
   {
     id: 'kurumsal-web-sitesi',
     title: 'Kurumsal Web Sitesi',
+    image:"https://plus.unsplash.com/premium_photo-1682088396002-3b835b3fb106?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29ycG9yYXRlJTIwd2Vic2l0ZSUyQyUyMHRlYW0lMjBjb2xsYWJvcmF0aW9uJTJDJTIwYnVzaW5lc3MlMjB1aSUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
     description:
       'Markanızın dijital vitrinini oluşturuyorum. Güven veren, kullanıcı dostu ve profesyonel kurumsal web siteleri ile müşterilerinize değer katın.',
     features: [
@@ -153,6 +155,7 @@ export const servicesData = [
   {
     id: 'e-ticaret-sitesi',
     title: 'E-Ticaret Sitesi',
+    image:"https://images.unsplash.com/photo-1661870139279-95fecab7c53a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTB8fGVjb21tZXJjZSUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D",
     description:
       'Online satışa başlamak ya da mevcut satışlarınızı artırmak istiyorsanız, size özel, güvenli ve kullanıcı dostu e-ticaret çözümleri sunuyorum.',
     features: [

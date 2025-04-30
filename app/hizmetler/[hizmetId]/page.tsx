@@ -1,11 +1,19 @@
-import HizmetClient from './HizmetClient'
+import SingleServicePage from './HizmetClient'
 
-const page = () => {
+type PageProps = {
+  params: {
+    hizmetId: string
+  }
+}
+
+const Page = ({ params }: PageProps) => {
+  console.log('hizmetId', params.hizmetId)
+
   return (
     <div>
-      <HizmetClient />
+      <SingleServicePage hizmetId={params.hizmetId} />
     </div>
   )
 }
 
-export default page
+export default Page
