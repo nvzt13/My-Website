@@ -51,3 +51,77 @@ section {
     padding: 20px; /* Optional padding for smaller screens */
   }
 }
+
+@layer base {
+  :root {
+    /* Arka Plan Renkleri */
+    --background: 220 60% 96%;    /* Hafif mavi-gri arka plan */
+    --card: 0 0% 100%;             /* Beyaz kart */
+    --popover: 220 40% 98%;        /* Karttan biraz daha soluk */
+    --input: 220 60% 95%;          /* Açık mavi-gri input */
+  
+    /* Yazı Renkleri */
+    --foreground: 220 25% 15%;     /* Koyu mavi (başlıklar için) */
+    --card-foreground: 220 15% 25%;/* Normal yazılar */
+    --popover-foreground: 220 10% 30%; /* Popover içi yazılar */
+  
+    /* Diğer Temel Renkler */
+    --primary: 245 58% 55%;        /* Morumsu bir ana renk */
+    --primary-foreground: 0 0% 100%; /* Primary üzerine beyaz yazı */
+    
+    --secondary: 180 55% 45%;      /* Mavi-yeşil ikinci renk */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 220 40% 92%;          /* Soluk gri */
+    --muted-foreground: 220 20% 40%; /* Soluk yazı */
+  
+    --accent: 48 94% 68%;          /* Altın sarısı vurgular */
+    --accent-foreground: 0 0% 15%;
+  
+    --destructive: 0 80% 60%;      /* Kırmızı hata */
+    --destructive-foreground: 0 0% 100%;
+  
+    --border: 220 20% 85%;         /* Soft border */
+    --ring: 220 20% 70%;           /* Focus halkası */
+  }
+  
+  .dark {
+    /* Dark mode renkler */
+    --background: 220 40% 10%;
+    --card: 220 25% 14%;
+    --popover: 220 30% 12%;
+    --input: 220 30% 14%;
+  
+    --foreground: 220 20% 90%;
+    --card-foreground: 220 15% 80%;
+    --popover-foreground: 220 10% 70%;
+  
+    --primary: 245 58% 65%;
+    --primary-foreground: 0 0% 100%;
+  
+    --secondary: 180 45% 50%;
+    --secondary-foreground: 0 0% 100%;
+  
+    --muted: 220 30% 20%;
+    --muted-foreground: 220 15% 60%;
+  
+    --accent: 48 94% 58%;
+    --accent-foreground: 0 0% 10%;
+  
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 100%;
+  
+    --border: 220 15% 20%;
+    --ring: 220 20% 40%;
+  }
+  
+}
+
+@layer base {
+  * {
+    @apply border-border;
+   }
+  body {
+    @apply bg-background text-foreground;
+   }
+}

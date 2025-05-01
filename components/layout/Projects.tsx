@@ -4,9 +4,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from '@/components/sub/ProjectCard';
-import { projectData } from '@/constants/index';
+import { useAppSelector } from "@/lib/redux/hooks";
 
 export default function Projects() {
+    const projectData = useAppSelector((state) => state.projects.projects);
   const settings = {
     dots: false,
     infinite: true,  // Sonsuz kaydırma
@@ -44,13 +45,15 @@ export default function Projects() {
         {projectData.map((work, index) => (
           <div key={index}>
             <ProjectCard
-              id={work.id}
-              src={work.src}
-              title={work.title}
-              date={work.date}
-              href={work.href}
-              technologies={work.technologies}
-            />
+            id={work.id}
+            title={work.title}
+            address={work.address}
+            technologies={work.technologies}
+            date={work.date}
+            file={work.file}
+            createdAt={work.createdAt}
+            updatedAt={work.updatedAt}
+                />
           </div>
         ))}
       </Slider>

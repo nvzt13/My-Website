@@ -8,14 +8,9 @@ import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProjectCardProps } from '@/type/types'
+import { Post } from '@prisma/client';
 
-export default function OverflowCard({
-  src,
-  title,
-  date,
-  href,
-  technologies,
-}: ProjectCardProps) {
+export default function OverflowCard({ title, technologies, date, file, address: href }: Post) {
   return (
     <div className="flex justify-center my-4">
     <Card
@@ -32,7 +27,7 @@ export default function OverflowCard({
           <Image
             height={500}
             width={500}
-            src={src}
+            src={file || null} 
             loading="lazy"
             alt={title}
             className="object-contain object-[50%_0] w-full h-full rounded-t-lg transition-all duration-300 ease-in-out group-hover:opacity-80"

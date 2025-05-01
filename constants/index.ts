@@ -105,9 +105,9 @@ export const projectData = [
   {
   id:3,
   title: "Task Menegament App coming...",
-  src: "/.jpg",
+  src: "/blog.jpg",
   href: "#",
-  technologies:"Next.js, Prisma, Tailwind, TypeScript, Auth.js",
+  technologies:"Next.js, Prisma, Tailwind, TypeScript",
   date:"Ocak 30, 2025"
 },
 ]

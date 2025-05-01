@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/main/Footer";
-import Nav from "@/components/main/Nav";
-import {StoreProvider} from "../lib/StoreProvider";
+import Footer from "@/components/layout/Footer";
+import Nav from "@/components/layout/Nav";
+import StoreProvider from "../components/StoreProvider";
 import Theme from "@/components/sub/Theme";
-
+import FillReduxStore from "@/components/FillReduxStore";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +26,7 @@ export default function RootLayout({
   <Nav />
   <Theme />
   <div className="flex-grow">{children}</div>
+  <FillReduxStore />
   <Footer />
 </body>
     </html>
