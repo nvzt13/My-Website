@@ -30,7 +30,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-16 dark:bg-gray-900 max-w-7xl mx-auto shadow-lg bg-[#f9fafb]">
+    <section id="hizmetler" className="py-16 dark:bg-gray-900 max-w-7xl mx-auto shadow-lg bg-[#f9fafb] scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık */}
         <motion.h2

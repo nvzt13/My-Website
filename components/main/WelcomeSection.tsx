@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const WelcomeSection = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 bg-gradient-to-r from-[#eff4ff] to-[#55bded] dark:from-gray-900 dark:to-gray-800 max-w-7xl mx-auto shadow-lg mt-24">
+    <section id="ana-sayfa" className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 bg-gradient-to-r from-[#eff4ff] to-[#55bded] dark:from-gray-900 dark:to-gray-800 max-w-7xl mx-auto shadow-lg mt-12 scroll-mt-20">
       {/* Sol taraf (Yazı ve butonlar) */}
       <div className="md:w-1/2 text-center md:text-left">
         <motion.h1

@@ -15,6 +15,9 @@ const Footer = () => {
           <p className="text-gray-600 dark:text-gray-400">
             Profesyonel web tasarım ve yazılım hizmetleri.
           </p>
+          <Link href={"/login"} className="mt-4 inline-block text-indigo-600 dark:text-indigo-400 hover:underline">
+            Admin
+          </Link>
         </div>
 
         {/* Hizmetler */}

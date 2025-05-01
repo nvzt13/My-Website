@@ -1,31 +1,12 @@
 'use client';
 
+import { blogPosts } from "@/constants";
 import React from "react";
 
-const blogPosts = [
-  {
-    title: "2025 Web Tasarım Trendleri",
-    description: "Modern web tasarımında öne çıkan trendler ve kullanıcı deneyimi yaklaşımları.",
-    image: "https://via.placeholder.com/300x200",
-    link: "#"
-  },
-  {
-    title: "E-Ticaret Çözümleri",
-    description: "Online mağazanızı başarıya taşıyacak temel e-ticaret stratejileri.",
-    image: "https://via.placeholder.com/300x200",
-    link: "#"
-  },
-  {
-    title: "SEO Optimizasyonu",
-    description: "Web sitenizi arama motorlarında üst sıralara taşıyacak SEO ipuçları.",
-    image: "https://via.placeholder.com/300x200",
-    link: "#"
-  },
-];
 
 const BlogSection = () => {
   return (
-    <section className="bg-gradient-to-r from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-6 text-center max-w-7xl mx-auto shadow-lg">
+    <section id="blog" className="bg-gradient-to-r from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-6 text-center max-w-7xl mx-auto shadow-lg scroll-mt-20">
       <div className="py-12 px-4 sm:px-6 lg:px-12 text-center max-w-7xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">Blog</h2>
         <p className="text-gray-500 dark:text-gray-400 mb-10">Son Yazılar ve Güncellemeler</p>
@@ -48,7 +29,7 @@ const BlogSection = () => {
                 {post.description}
               </p>
               <a
-                href={post.link}
+                href={`/blog/${post.id}`}
                 className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
               >
                 Devamını Oku →

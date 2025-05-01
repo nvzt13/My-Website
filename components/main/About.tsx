@@ -3,20 +3,20 @@ import { FaCode, FaMobileAlt, FaPaintBrush, FaSearch } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 shadow-lg">
+    <section id="hakkimizda" className="bg-gray-100 dark:bg-gray-800 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 shadow-lg scroll-mt-20">
       <div className="flex flex-col md:flex-row items-center justify-center">
         {/* Profil Fotoğrafı */}
         <img
-          src="https://via.placeholder.com/250"
+          src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHdlYnxlbnwwfHwwfHx8MA%3D%3D"
           alt="Nevzat"
           className="rounded-2xl w-60 h-60 object-cover shadow-md mb-6 md:mb-0 md:mr-10"
         />
 
         {/* Yazı İçeriği */}
         <div className="text-left">
-          <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Hakkımda</h2>
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Hakkımızda</h2>
           <p className="text-gray-700 dark:text-gray-300 mb-4 max-w-md">
-            Merhaba, ben <strong className="text-black dark:text-white">Nevzat</strong>. 10 yılı aşkın süredir web tasarımı ve yazılım alanında profesyonel hizmetler sunuyorum. Modern ve kullanıcı odaklı dijital çözümler üretmek benim tutkum.
+          Modern ve kullanıcı odaklı web çözümleri geliştirerek markaların dijital dünyada fark yaratmasına yardımcı oluyoruz. Tasarım, yazılım ve performans odağımızdır.
           </p>
 
           {/* Hizmetler */}

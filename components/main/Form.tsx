@@ -23,8 +23,8 @@ const ContactForm = () => {
 
   return (
     <section
-      id="contact"
-      className="bg-white dark:bg-gray-900 py-20 max-w-7xl shadow-lg"
+      id="iletisim"
+      className="bg-white dark:bg-gray-800 py-20 max-w-7xl shadow-lg scroll-mt-20"
     >
       <div className="mx-auto py-12 px-4 w-full">
         <h2 className="text-2xl font-semibold text-center mb-8 text-gray-800 dark:text-white">

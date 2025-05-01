@@ -175,9 +175,89 @@ export const servicesData = [
   
   
   
+export const blogPosts = [
+  {
+    id: "1",
+    title: "2025 Web Tasarım Trendleri",
+    slug: "2025-web-tasarim-trendleri",
+    description: "Modern web tasarımında öne çıkan trendler ve kullanıcı deneyimi yaklaşımları.",
+    content: `
+2025 yılı, web tasarımında kullanıcı odaklı ve teknolojik gelişmelerin harmanlandığı bir dönem olarak öne çıkıyor. Artık yalnızca estetik bir arayüz yeterli değil; işlevsellik, erişilebilirlik ve kişiselleştirme ögeleri de en az tasarım kadar önemli. Bu yazımızda 2025 yılı itibariyle öne çıkan web tasarım trendlerini kapsamlı şekilde inceliyoruz.
 
-  
-  
-  
-  
-  
+### 1. Artırılmış Gerçeklik (AR) Entegrasyonları
+AR, özellikle e-ticaret ve eğitim sektörlerinde büyük bir dönüşüm yaratıyor. Web siteleri artık kullanıcıların ürünleri 3D olarak deneyimleyebileceği, ortamlarına sanal olarak yerleştirebileceği deneyimler sunuyor. Bu teknoloji sayesinde kullanıcılar satın alma öncesi daha bilinçli kararlar verebiliyor.
+
+### 2. Yapay Zeka ile Kişiselleştirme
+Kullanıcı davranışlarını analiz eden yapay zeka algoritmaları, sitelerin kullanıcıya özel içerik sunmasını sağlıyor. Bu, kullanıcı deneyimini daha etkili kılarken, etkileşim oranlarını da artırıyor. Örneğin, bir moda sitesinde kullanıcı geçmişine göre kombin önerileri sunulabiliyor.
+
+### 3. Minimalist ve Sürdürülebilir Tasarım
+Sadeleştirilmiş kullanıcı arayüzleri ve karbon ayak izini azaltmaya yönelik optimizasyonlar giderek yaygınlaşıyor. Hafif kod yapıları, optimize edilmiş görseller ve enerji dostu barındırma çözümleri, 2025’in çevreci yaklaşımları arasında.
+
+### 4. Mobil Öncelikli Yaklaşım
+Google’ın mobil öncelikli indeksleme politikasıyla birlikte responsive (duyarlı) tasarımlar artık bir standart haline geldi. Ancak 2025’te bu durum bir adım ileri taşınıyor: Progressive Web App (PWA) teknolojileri ile mobil deneyim, uygulama kalitesinde performans sağlıyor.
+
+### 5. Mikro Etkileşimler ve Hareketli UI Bileşenleri
+Hover animasyonları, buton geçişleri ve scroll tabanlı mikro etkileşimler, kullanıcıları yönlendirme ve dikkat çekme konusunda önemli bir rol oynuyor. Özellikle story-telling (hikaye anlatımı) odaklı sitelerde bu özellikler ziyaretçiyi daha uzun süre sitede tutmayı başarıyor.
+
+2025’in web tasarım trendlerini yakından takip ederek, hem kullanıcı memnuniyetini artırabilir hem de rekabetçi dijital dünyada bir adım öne geçebilirsiniz.
+    `,
+    image: "https://plus.unsplash.com/premium_photo-1728457448772-13474b6e8488?w=500&auto=format&fit=crop&q=60",
+    date: "2025-01-10",
+  },
+  {
+    id: "2",
+    title: "E-Ticaret Çözümleri",
+    slug: "e-ticaret-cozumleri",
+    description: "Online mağazanızı başarıya taşıyacak temel e-ticaret stratejileri.",
+    content: `
+E-ticaret sektöründe rekabet her geçen gün daha da kızışırken, işletmelerin sürdürülebilir büyüme sağlayabilmeleri için yalnızca ürün kalitesi değil, aynı zamanda teknolojik altyapı ve kullanıcı deneyimi stratejileri de büyük önem taşıyor. 2025 yılında etkili bir e-ticaret yönetimi için olmazsa olmaz unsurları bu makalede detaylı biçimde inceliyoruz.
+
+### 1. Entegre Satış Kanalları (Omnichannel Yaklaşımı)
+Artık sadece bir web sitesi üzerinden satış yapmak yeterli değil. Instagram, TikTok, Amazon, Trendyol gibi platformlarla entegre çalışan çok kanallı sistemler, satışları %40’a varan oranlarda artırabiliyor. Tek merkezden stok ve sipariş takibi sağlayan sistemler bu noktada kritik.
+
+### 2. Gelişmiş Ürün Filtreleme ve Arama Sistemleri
+Kullanıcının aradığı ürünü saniyeler içinde bulmasını sağlamak, dönüşüm oranlarını doğrudan etkiliyor. Akıllı arama motorları, yazım hatalarını anlayabilen ve öneriler sunabilen algoritmalarla donatılmış olmalı.
+
+### 3. Yapay Zeka Destekli Öneri Sistemleri
+Özellikle büyük ürün yelpazesine sahip siteler için, kullanıcıya özel öneriler sunmak satışları ciddi ölçüde artırır. Müşteri geçmişi, gezinme alışkanlıkları ve favoriler üzerinden çalışan bu sistemler, kişiselleştirilmiş bir alışveriş deneyimi sağlar.
+
+### 4. Kargo ve Teslimat Deneyimi
+2025’te hızlı kargo tek başına yeterli değil. Kullanıcıya gönderim süreci hakkında detaylı bilgi veren, kargonun haritadaki konumunu gösteren sistemler tercih sebebi. Ayrıca sürdürülebilir ambalaj kullanımı da çevre duyarlılığı açısından markalara artı puan kazandırıyor.
+
+### 5. Mobil Uygulamalar ve PWA Kullanımı
+Mobil cihazlardan gelen trafik, toplam ziyaretlerin %75’ini oluşturuyor. Bu nedenle hızlı açılan, kullanıcı dostu ve offline erişime imkan tanıyan Progressive Web App çözümleri, geleneksel mobil uygulamaların yerini almaya başladı.
+
+Başarılı bir e-ticaret operasyonu için teknolojik altyapınızın güncel olması kadar, müşteri deneyimini sürekli iyileştirmek de büyük önem taşır. Stratejinizi bu alanlarda güçlendirerek dijital pazarda öne çıkabilirsiniz.
+    `,
+    image: "https://images.unsplash.com/photo-1726065235188-20092754fc29?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8",
+    date: "2025-02-15",
+  },
+  {
+    id: "3",
+    title: "SEO Optimizasyonu",
+    slug: "seo-optimizasyonu",
+    description: "Web sitenizi arama motorlarında üst sıralara taşıyacak SEO ipuçları.",
+    content: `
+SEO, dijital dünyada görünür olmanın en stratejik yollarından biridir. Ancak 2025 yılı itibarıyla SEO dinamikleri çok daha sofistike hale geldi. Artık sadece anahtar kelime yerleştirmek yeterli değil; algoritmalar kullanıcı davranışlarını ve etkileşimlerini de analiz ediyor. Bu yazıda web sitenizin SEO performansını üst düzeye taşıyacak güncel taktikleri detaylıca ele alıyoruz.
+
+### 1. Kullanıcı Deneyimi (UX) Odaklı Optimizasyon
+Google, kullanıcı deneyimini doğrudan sıralama sinyali olarak değerlendiriyor. Hemen çıkma oranı, sayfada geçirilen süre ve sayfa gezinme derinliği gibi metrikler, artık teknik SEO kadar önemli. Akıcı bir kullanıcı arayüzü, sade menü yapısı ve net CTA butonları, bu alanda temel gerekliliklerden.
+
+### 2. Sayfa Hızı ve Core Web Vitals
+Web sitenizin hızı, kullanıcıların siteyi terk etme olasılığını doğrudan etkiler. Google’ın Core Web Vitals metrikleri; sayfa yüklenme süresi, etkileşim hızı ve görsel stabiliteyi değerlendirerek sıralamanızı belirliyor. Lighthouse ve PageSpeed Insights araçları ile düzenli analiz yapılmalı.
+
+### 3. Semantik ve Niyet Tabanlı Anahtar Kelime Kullanımı
+2025’te SEO başarısı, yalnızca belirli kelimeleri tekrarlamakla değil, kullanıcının arama niyetini anlamakla mümkün. “Kamp çadırı al” araması ile “en iyi kamp çadırı markaları” arasında niyet farkı vardır ve içerikler bu farklara göre optimize edilmelidir.
+
+### 4. Mobil Uyumluluk ve Erişilebilirlik
+Mobil uyumlu olmayan web siteleri artık arama motorlarında neredeyse görünmez hale geldi. Ayrıca erişilebilirlik (a11y) standartlarına uygunluk da, Google tarafından ödüllendirilen bir faktör. Kontrast oranı, ekran okuyucu desteği ve alternatif metin kullanımı gibi öğeler mutlaka göz önünde bulundurulmalı.
+
+### 5. Kaliteli ve Derinlemesine İçerik
+Uzun ve detaylı içerikler, arama motorlarında daha yüksek sıralamalar alır. Ancak bu içeriklerin özgün, kaynaklı ve kullanıcıya değer katan bilgilerle dolu olması gerekir. Görseller, videolar ve infografikler ile zenginleştirilmiş içerikler, kullanıcıların sayfada daha uzun süre kalmasını sağlar.
+
+SEO, sürekli gelişen bir alan olduğu için düzenli analiz ve optimizasyon büyük önem taşır. Doğru stratejilerle, sitenizin görünürlüğünü ve dönüşüm oranlarını artırabilirsiniz.
+    `,
+    image: "https://plus.unsplash.com/premium_photo-1683578888262-22a112723a83?w=500&auto=format&fit=crop&q=60",
+    date: "2025-03-01",
+  },
+];

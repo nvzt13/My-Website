@@ -43,14 +43,14 @@ const Nav = () => {
   }, [isOpen]);
   const navItems = [
     { label: 'Ana Sayfa', href: '/' },
-    { label: 'Hizmetler', href: '#services' },    // bu da belki `/services`?
-    { label: 'Hakkımızda', href: '#about' },
-    { label: 'Blog', href: '#blog' },         // muhtemelen `/blog` olmalı?
-    { label: 'Projeler', href: '#works' },
-    { label: 'İletişim', href: '#contact' },
+    { label: 'Hizmetler', href: '/#hizmetler' },    // bu da belki `/services`?
+    { label: 'Hakkımızda', href: '/#hakkimizda' },
+    { label: 'Blog', href: '/#blog' },         // muhtemelen `/blog` olmalı?
+    { label: 'Projeler', href: '/#projeler' },
+    { label: 'İletişim', href: '/#iletisim' },
   ];
   return (
-    <header className="bg-gray-100 dark:bg-gray-900 w-full h-auto shadow-lg top-0 py-4 fixed z-50">
+    <header className="bg-gray-100 dark:bg-gray-900 w-full h-auto shadow-lg top-0 py-4 sticky z-50">
       <nav className="max-w-[100rem] w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between w-full">
           <Link

@@ -36,15 +36,13 @@ export default function Projects() {
   };
 
   return (
-    <section className="py-16 dark:bg-gray-900 flex flex-col items-center max-w-7xl mx-auto shadow-lg  px-4 sm:px-6 lg:px-12 bg-gray-100">
+    <section id="projeler" className="py-16 dark:bg-gray-900 flex flex-col items-center max-w-7xl mx-auto shadow-lg  px-4 sm:px-6 lg:px-12 bg-gray-100 scroll-mt-20">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 dark:text-white mb-2">Projeler</h2>
       <p className="text-gray-600 dark:text-gray-300 text-center mb-10">Başarıyla tamamladığımız projeler</p>
-      <div className="mb-24">
-      </div>
       {/* Slider öğeleri arasındaki boşlukları optimize ettik */}
-      <Slider {...settings} className="mx-auto max-w-full sm:max-w-[768px]">
+      <Slider {...settings} className="mx-auto w-full">
         {projectData.map((work, index) => (
-          <div key={index} className="group px-2">  {/* Kartlar arasındaki boşluk azaltıldı */}
+          <div key={index}>
             <ProjectCard
               id={work.id}
               src={work.src}

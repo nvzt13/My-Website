@@ -7,8 +7,6 @@ type PageProps = {
 }
 
 const Page = ({ params }: PageProps) => {
-  console.log('hizmetId', params.hizmetId)
-
   return (
     <div>
       <SingleServicePage hizmetId={params.hizmetId} />

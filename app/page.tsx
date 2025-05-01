@@ -1,7 +1,6 @@
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Services";
 import WelcomeSection from "@/components/main/WelcomeSection";
-import Progress from "@/components/main/Portfolio";
 import About from "@/components/main/About";
 import BlogSection from "@/components/main/Blogs";
 import Form from "@/components/main/Form";
