@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaCode, FaMobileAlt, FaPaintBrush, FaSearch } from "react-icons/fa";
 
@@ -6,10 +7,12 @@ const About = () => {
     <section id="hakkimizda" className="bg-gray-100 dark:bg-gray-800 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 shadow-lg scroll-mt-20">
       <div className="flex flex-col md:flex-row items-center justify-center">
         {/* Profil Fotoğrafı */}
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHdlYnxlbnwwfHwwfHx8MA%3D%3D"
           alt="Nevzat"
           className="rounded-2xl w-60 h-60 object-cover shadow-md mb-6 md:mb-0 md:mr-10"
+          width={500}
+          height={500}
         />
 
         {/* Yazı İçeriği */}

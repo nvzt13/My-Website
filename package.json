@@ -53,6 +53,6 @@
     "prisma": "^6.6.0",
     "react-intersection-observer": "^9.5.2",
     "tailwindcss": "^3",
-    "typescript": "^5"
+    "typescript": "5.3"
   }
 }

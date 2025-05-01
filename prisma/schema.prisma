@@ -19,7 +19,7 @@ model Post {
   address      String
   technologies String
   date         String
-  file         String
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  image         String
+  createdAt    DateTime? @default(now())
+  updatedAt    DateTime? @updatedAt
 }

@@ -6,11 +6,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 type Props = {
-  hizmetId: string;
+  id: string;
 };
 
-export default function SingleServicePage({ hizmetId }: Props) {
-  const service = servicesData.find((item) => item.id === hizmetId);
+export default function SingleServicePage({ id }: Props) {
+  const service = servicesData.find((item) => item.id === id);
   if (!service) return notFound();
 
   return (

@@ -7,10 +7,9 @@ import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ProjectCardProps } from '@/type/types'
 import { Post } from '@prisma/client';
 
-export default function OverflowCard({ title, technologies, date, file, address: href }: Post) {
+export default function OverflowCard({ title, technologies, date, image, address: href }: Post) {
   return (
     <div className="flex justify-center my-4">
     <Card
@@ -27,7 +26,7 @@ export default function OverflowCard({ title, technologies, date, file, address:
           <Image
             height={500}
             width={500}
-            src={file || null} 
+            src={image} 
             loading="lazy"
             alt={title}
             className="object-contain object-[50%_0] w-full h-full rounded-t-lg transition-all duration-300 ease-in-out group-hover:opacity-80"
@@ -58,7 +57,7 @@ export default function OverflowCard({ title, technologies, date, file, address:
             sx={{ fontWeight: 'md' }}
             className="group-hover:text-indigo-600 transition-all duration-300 ease-in-out dark:text-light dark:group-hover:text-indigo-500"
           >
-            <Link href={href} target="_blank" rel="noopener noreferrer">
+            <Link href={href} target="_blank" rel="noopener noreferrer" className='text-gray-900 dark:text-white'>
               Visit Project
             </Link>
           </Typography>

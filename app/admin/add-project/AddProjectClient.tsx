@@ -11,51 +11,58 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ProjectCardProps } from "@/type/types";
 import { useAppDispatch } from "@/lib/redux/hooks";
 import { createProject } from "@/lib/redux/projectSlice";
+import { Post } from "@prisma/client";
 
 const AddProjectClient = () => {
   const dispatch = useAppDispatch();
-  // Form state yönetimi
-  const [formData, setFormData] = React.useState<ProjectCardProps>({
+
+  const [formData, setFormData] = React.useState<Post>({
+    id: "",
     title: "",
     address: "",
     technologies: "",
     date: "",
-    file: undefined,
+    image: "",
+    createdAt: null,
+    updatedAt: null,
   });
 
-  // Form gönderme fonksiyonu
   const handleSubmit = async (e: React.FormEvent) => {
-    console.log("Form submitted:", formData);
     e.preventDefault();
+    console.log("Form submitted:", formData);
     dispatch(createProject(formData));
   };
 
-  // Tüm inputlar için state güncelleme
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value, // Tüm text inputlar için
+      [name]: value,
     }));
   };
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const { name } = e.target;
-        setFormData((prev) => ({
-          ...prev,
-          [name]: reader.result as string, // Tüm text inputlar için
-        }));
-      };
-      reader.readAsDataURL(file);
+  const convertDriveLinkToUC = (link: string) => {
+    const regex = /https:\/\/drive\.google\.com\/file\/d\/([^/]+)\/view/;
+    const match = link.match(regex);
+    if (match && match[1]) {
+      const fileId = match[1];
+      return `https://drive.google.com/uc?export=view&id=${fileId}`;
+    } else {
+      return link;
     }
   };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    const converted = convertDriveLinkToUC(value);
+    setFormData((prev) => ({
+      ...prev,
+      image: converted,
+    }));
+  };
+
   return (
     <div className="container mx-auto p-6">
       <Card>
@@ -67,22 +74,12 @@ const AddProjectClient = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="title">Proje Başlığı</Label>
-              <Input
-                id="title"
-                name="title"
-                required
-                onChange={handleInputChange} // Text inputlar için handleInputChange kullan
-              />
+              <Input id="title" name="title" required onChange={handleInputChange} />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="address">Proje Adresi</Label>
-              <Input
-                id="address"
-                name="address"
-                required
-                onChange={handleInputChange}
-              />
+              <Input id="address" name="address" required onChange={handleInputChange} />
             </div>
 
             <div className="space-y-2">
@@ -98,23 +95,17 @@ const AddProjectClient = () => {
 
             <div className="space-y-2">
               <Label htmlFor="date">Tarih</Label>
-              <Input
-                id="date"
-                name="date"
-                type="date"
-                required
-                onChange={handleInputChange}
-              />
+              <Input id="date" name="date" type="date" required onChange={handleInputChange} />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="file">Proje Görseli</Label>
+              <Label htmlFor="image">Proje Görseli (Google Drive Bağlantısı)</Label>
               <Input
-                id="file"
-                name="file"
-                type="file"
-                accept="image/*"
-                onChange={handleImageChange} // Dosya için ayrı handleFileChange kullan
+                id="image"
+                name="image"
+                type="text"
+                placeholder="https://drive.google.com/file/d/..../view"
+                onChange={handleImageChange}
               />
             </div>
 

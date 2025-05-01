@@ -1,6 +1,7 @@
 'use client';
 
 import { blogPosts } from "@/constants";
+import Image from "next/image";
 import React from "react";
 
 
@@ -17,10 +18,12 @@ const BlogSection = () => {
               key={index}
               className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4 text-left"
             >
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
                 className="rounded-lg mb-4 h-40 w-full object-cover"
+                width={400}
+                height={200}
               />
               <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-2">
                 {post.title}

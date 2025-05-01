@@ -1,16 +1,11 @@
-export interface ProjectCardProps {
-  title: string;
-  address: string;
-  technologies: string;
-  date: string;
-  file?: string 
-}
+import { Post } from "@prisma/client";
+
 
 export interface ThemeState {
   isDark: boolean;
 }
 export interface ProjectInitialStateProps {
-  projects: ProjectCardProps[];
+  projects: Post[];
   loading: boolean;
   error: string | null;
 }

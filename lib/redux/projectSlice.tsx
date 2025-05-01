@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { ProjectCardProps, ProjectInitialStateProps } from '@/type/types';
+import { ProjectInitialStateProps } from '@/type/types';
+import { Post } from '@prisma/client';
 
 // fetchProjects function
 export const fetchProjects = createAsyncThunk(
@@ -22,7 +23,7 @@ export const fetchProjects = createAsyncThunk(
 // createProject function
 export const createProject = createAsyncThunk(
   'projects/createProject',
-  async (formData: ProjectCardProps) => {
+  async (formData: Post) => {
     const res = await fetch('/api/project/create', {
       method: 'POST',
       body: JSON.stringify(formData),

@@ -10,9 +10,6 @@ const FillReduxStore = () => {
   useEffect(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
-
-  console.log("fillredux çalıştı")
-
   return (
     <div>
     </div>

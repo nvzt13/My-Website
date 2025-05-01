@@ -8,34 +8,35 @@ import { useAppSelector } from "@/lib/redux/hooks";
 
 export default function Projects() {
     const projectData = useAppSelector((state) => state.projects.projects);
-  const settings = {
-    dots: false,
-    infinite: true,  // Sonsuz kaydırma
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,  // Otomatik oynatma
-    autoplaySpeed: 0,  // Geçişler arasındaki süreyi artırdık
-    speed: 10000,  // Geçişin yavaş olması için daha uzun süre ayarladık
-    cssEase: "linear",  // Geçişi daha yumuşak hale getirdik
-    arrows:false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+    console.log(projectData);
+    const settings = {
+      dots: false,
+      infinite: projectData.length > 2, // en az 3 proje varsa sonsuz olsun
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000, // 3 saniyede bir
+      speed: 800,          // 0.8 saniyede geçiş yapsın
+      cssEase: "ease-in-out",
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
         },
-      },
-      {
-        breakpoint: 640, // "sm" ekranlar için ek bir breakpoint
-        settings: {
-          slidesToShow: 1, // Küçük ekranlarda bir kart gösterilecek
-          slidesToScroll: 1,
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
         },
-      },
-    ],
-  };
-
+      ],
+    };
+    
   return (
     <section id="projeler" className="py-16 dark:bg-gray-900 flex flex-col items-center max-w-7xl mx-auto shadow-lg  px-4 sm:px-6 lg:px-12 bg-gray-100 scroll-mt-20">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 dark:text-white mb-2">Projeler</h2>
@@ -50,7 +51,7 @@ export default function Projects() {
             address={work.address}
             technologies={work.technologies}
             date={work.date}
-            file={work.file}
+            image={work.image}
             createdAt={work.createdAt}
             updatedAt={work.updatedAt}
                 />

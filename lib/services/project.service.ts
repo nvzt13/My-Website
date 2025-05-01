@@ -11,7 +11,7 @@ export async function create(data: {
   address: string;
   technologies: string;
   date: string;
-  file?: string;
+  image?: string;
 }) {
   const newProject = await prisma.post.create({
     data: {
@@ -19,7 +19,7 @@ export async function create(data: {
       address: data.address,
       technologies: data.technologies,
       date: data.date,
-      file: data.file ?? '',
+      image: data.image ?? '',
     },
   });
 
@@ -41,7 +41,7 @@ export async function update(data: {
   address: string;
   technologies: string;
   date: string;
-  file?: string;
+  image?: string;
 }) {
   const updatedProject = await prisma.post.update({
     where: {
@@ -52,7 +52,7 @@ export async function update(data: {
       address: data.address,
       technologies: data.technologies,
       date: data.date,
-      file: data.file ?? '',
+      image: data.image ?? '',
     },
   });
   return updatedProject;

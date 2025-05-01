@@ -1,5 +1,6 @@
 import React from 'react';
 import { blogPosts } from '@/constants/index';
+import Image from 'next/image';
 
 const renderContent = (content: string) => {
   const lines = content.split('\n').filter(line => line.trim() !== '');
@@ -30,10 +31,12 @@ const BlogClient = ({ id }: { id: string }) => {
   return (
     <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <article className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden transition-all">
-        <img
+        <Image
           src={post.image}
           alt={post.title}
           className="w-full h-60 object-cover sm:h-72 md:h-80"
+          width={800}
+          height={400}
         />
         <div className="p-6 sm:p-8">
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
