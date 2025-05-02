@@ -15,7 +15,6 @@ export const handlers = {
 
   DELETE: async (req: NextRequest) => {
     const id = req.url.split('/').pop() || ''
-    console.log(id)
     if (!id) {
       return NextResponse.json({ message: 'ID yok' }, { status: 400 })
     }

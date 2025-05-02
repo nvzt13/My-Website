@@ -29,13 +29,13 @@ const WelcomeSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <Link
-            href="#contact"
+            href="/#iletisim"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow transition duration-300 dark:bg-blue-500 dark:hover:bg-blue-600"
           >
             İletişime Geç
           </Link>
           <Link
-            href="#services"
+            href="/#hizmetler"
             className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-md shadow transition duration-300 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-500 dark:hover:text-white"
           >
             Hizmetlerimiz

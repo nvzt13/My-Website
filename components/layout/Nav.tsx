@@ -50,50 +50,58 @@ const Nav = () => {
     { label: 'İletişim', href: '/#iletisim' },
   ];
   return (
-    <header className="bg-gray-100 dark:bg-gray-900 w-full h-auto shadow-lg top-0 py-4 sticky z-50">
-      <nav className="max-w-[100rem] w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between">
-        <div className="flex items-center justify-between w-full">
-          <Link
-            href="/"
-            className="text-3xl"
-          >
-            Web13
-          </Link>
-          {/* Mobile menu button */}
-          <button 
-            ref={buttonRef} 
-            onClick={toggleMenu} 
-            className="sm:hidden text-3xl text-gray-200 dark:text-white transition-transform duration-300 ease-in-out hover:scale-110 focus:outline-none"
-          >
-{isOpen ? (
-  <FiX className="text-black dark:text-white" />
-) : (
-  <GrMenu className="text-black dark:text-white" />
-)}
-          </button>
-        </div>
-
-        <div ref={menuRef} className={`${isOpen ? 'block' : 'hidden'} w-full sm:flex sm:items-center sm:justify-end transition-all duration-500 ease-in-out text-[#000]`}>
-          <div className="flex flex-col gap-6 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5 mx-auto">
-          {navItems.map(({ label, href }) => (
+    <header className="bg-white/80 backdrop-blur-md dark:bg-gray-900/80 shadow-md px-6 py-4 sticky top-0 z-50">
+    <nav className="max-w-[100rem] w-full mx-auto px-5 sm:flex sm:items-center sm:justify-between">
+      <div className="flex items-center justify-between w-full">
         <Link
-          key={label}
-          href={href}
-          className={`
-            text-xl font-medium transition-colors
-            ${pathname === href
-              ? 'text-indigo-600 dark:text-blue-400'
-              : 'text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-blue-400'}
-          `}
+          href="/"
+          className="text-2xl font-bold text-indigo-700 dark:text-white hover:opacity-90 transition"
         >
-          {label}
+          Web13
         </Link>
-      ))}
-            <ThemeToggle />
-          </div>
+        <button 
+          ref={buttonRef} 
+          onClick={toggleMenu} 
+          className="sm:hidden text-3xl text-gray-800 dark:text-white transition-transform duration-300 hover:scale-110 focus:outline-none"
+        >
+          {isOpen ? (
+            <FiX />
+          ) : (
+            <GrMenu />
+          )}
+        </button>
+      </div>
+  
+      <div
+        ref={menuRef}
+        className={`
+          ${isOpen ? 'block opacity-100 scale-100' : 'hidden opacity-0 scale-95'} 
+          w-full sm:flex sm:items-center sm:justify-end 
+          transition-all duration-300 ease-in-out
+          text-[#000] sm:opacity-100 sm:scale-100
+        `}
+      >
+        <div className="flex flex-col gap-6 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5 mx-auto">
+          {navItems.map(({ label, href }) => (
+            <Link
+              key={label}
+              href={href}
+              className={`
+                text-lg font-medium transition-colors
+                ${pathname === href
+                  ? 'text-indigo-600 dark:text-blue-400 underline underline-offset-4'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-blue-400'}
+              `}
+            >
+              {label}
+            </Link>
+          ))}
+          <ThemeToggle />
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  
   );
 }
 

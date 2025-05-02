@@ -2,7 +2,6 @@ import { prisma } from '@/lib/prisma' // Prisma client
 // fetch all projects from the database
 export async function getAll() {
   const projects = await prisma.post.findMany()
-  console.log(projects)
   return projects
 }
 // create a new project in the database

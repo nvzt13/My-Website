@@ -13,10 +13,8 @@ export const fetchProjects = createAsyncThunk(
         Accept: 'application/json',
       },
     });
-    console.log("test")
     if (!res.ok) throw new Error('Veri alınamadı');
     const data = await res.json();
-    console.log("data")
     return data;
   }
 );

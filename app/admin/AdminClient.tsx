@@ -19,7 +19,6 @@ const AdminClient = () => {
   const dispatch = useAppDispatch();
 
   const handleDelete = (id: string) => {
-    console.log("Sil:", id);
     dispatch(deleteProject(id));
   };
 

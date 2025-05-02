@@ -1,9 +1,7 @@
 import { prisma } from '@/lib/prisma' // Prisma client
-interface Admin {
-  userName: string
-  password: string
-}
-export async function create(data) {
+import { Admin } from '@prisma/client';
+
+export async function create(data: Admin) {
   const newProject = await prisma.admin.create({
     data: {
       userName: data.userName,

@@ -32,7 +32,6 @@ export const handlers = {
     const token = await new SignJWT({
       id: admin.id,
       userName: admin.userName,
-      role: admin.role,
     })
       .setProtectedHeader({ alg: 'HS256' })
       .setExpirationTime('7d')
