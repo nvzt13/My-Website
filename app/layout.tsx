@@ -6,6 +6,7 @@ import Nav from "@/components/layout/Nav";
 import StoreProvider from "../components/StoreProvider";
 import Theme from "@/components/sub/Theme";
 import FillReduxStore from "@/components/FillReduxStore";
+import { Toaster } from "@/components/ui/sonner"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +29,8 @@ export default function RootLayout({
   <div className="flex-grow">{children}</div>
   <FillReduxStore />
   <Footer />
-</body>
+  <Toaster position="top-center" />
+  </body>
     </html>
   </StoreProvider>
   );

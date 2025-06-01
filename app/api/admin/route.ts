@@ -1,3 +1,3 @@
-import { handlers } from '@/lib/controllers/admin.handlers'
+import { handlers } from '@/lib/controllers/admin.controller'
 
 export const {  POST } = handlers

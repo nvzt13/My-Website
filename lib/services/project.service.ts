@@ -1,8 +1,8 @@
-import { prisma } from '@/lib/prisma' // Prisma client
+import { prisma } from "@/lib/prisma"; // Prisma client
 // fetch all projects from the database
 export async function getAll() {
-  const projects = await prisma.post.findMany()
-  return projects
+  const projects = await prisma.post.findMany();
+  return projects;
 }
 // create a new project in the database
 export async function create(data: {
@@ -18,7 +18,7 @@ export async function create(data: {
       address: data.address,
       technologies: data.technologies,
       date: data.date,
-      image: data.image ?? '',
+      image: data.image ?? "",
     },
   });
 
@@ -51,7 +51,7 @@ export async function update(data: {
       address: data.address,
       technologies: data.technologies,
       date: data.date,
-      image: data.image ?? '',
+      image: data.image ?? "",
     },
   });
   return updatedProject;
