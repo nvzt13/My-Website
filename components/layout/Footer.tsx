@@ -25,17 +25,17 @@ const Footer = () => {
           <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Hizmetler</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Link href="/hizmetler/kisisel-web-sitesi" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                 Kişisel Web Sitesi
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Link href="/hizmetler/kurumsal-web-sitesi" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                 Kurumsal Web Sitesi
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Link href="/hizmetler/e-ticaret-sitesi" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                 E-Ticaret Sitesi
               </Link>
             </li>
