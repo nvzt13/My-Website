@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaUser, FaBuilding, FaShoppingCart } from 'react-icons/fa';
+import Link from 'next/link';
 
 const services = [
   {
@@ -39,11 +40,11 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Hizmetlerimiz
+          Hizmetler
         </motion.h2>
 
         <p className="text-center text-gray-600 dark:text-gray-300 mb-12">
-          Size özel dijital çözümler sunuyoruz
+          Size özel dijital çözümler sunuyorum
         </p>
 
         {/* Kartlar */}
@@ -68,12 +69,12 @@ const Services = () => {
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 {service.description}
               </p>
-              <a
+              <Link
                 href={`/hizmetler/${service.id}`}
                 className="text-blue-600 hover:underline flex items-center gap-1 font-medium"
               >
                 Detaylı Bilgi →
-              </a>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

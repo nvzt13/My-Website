@@ -38,7 +38,7 @@ const WelcomeSection = () => {
             href="/#hizmetler"
             className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-md shadow transition duration-300 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-500 dark:hover:text-white"
           >
-            Hizmetlerimiz
+            Neler Yapıyorum?
           </Link>
         </div>
       </div>

@@ -57,7 +57,7 @@ const Nav = () => {
           href="/"
           className="text-2xl font-bold text-indigo-700 dark:text-white hover:opacity-90 transition"
         >
-          Web13
+          Nevzat Atalay
         </Link>
         <button 
           ref={buttonRef} 

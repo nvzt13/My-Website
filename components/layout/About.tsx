@@ -19,7 +19,7 @@ const About = () => {
         <div className="text-left">
           <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Hakkımızda</h2>
           <p className="text-gray-700 dark:text-gray-300 mb-4 max-w-md">
-          Modern ve kullanıcı odaklı web çözümleri geliştirerek markaların dijital dünyada fark yaratmasına yardımcı oluyoruz. Tasarım, yazılım ve performans odağımızdır.
+          Modern ve kullanıcı odaklı web çözümleri geliştirerek markaların dijital dünyada fark yaratmasına yardımcı oluyorum. Tasarım, yazılım ve performans odağımızdır.
           </p>
 
           {/* Hizmetler */}

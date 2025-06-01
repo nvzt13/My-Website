@@ -11,7 +11,7 @@ const Footer = () => {
         
         {/* Marka */}
         <div>
-          <h3 className="font-bold text-lg text-gray-800 dark:text-white mb-2">Nevzat</h3>
+          <h3 className="font-bold text-lg text-gray-800 dark:text-white mb-2">Nevzat Atalay</h3>
           <p className="text-gray-600 dark:text-gray-400">
             Profesyonel web tasarım ve yazılım hizmetleri.
           </p>
@@ -47,17 +47,17 @@ const Footer = () => {
           <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Hızlı Bağlantılar</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Link href="#projeler" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                 Portfolyo
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Link href="#hakkimizda" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                 Hakkımda
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Link href="#blog" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                 Blog
               </Link>
             </li>
@@ -81,7 +81,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-xs text-gray-500 dark:text-gray-400 mt-10 border-t pt-4 border-gray-200 dark:border-gray-700">
-        © 2025 Nevzat. Tüm hakları saklıdır.
+        © 2025 Nevzat Atalay. Tüm hakları saklıdır.
       </div>
     </footer>
   );

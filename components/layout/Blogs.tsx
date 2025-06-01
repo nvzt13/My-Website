@@ -2,6 +2,7 @@
 
 import { blogPosts } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 
@@ -31,12 +32,12 @@ const BlogSection = () => {
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                 {post.description}
               </p>
-              <a
+              <Link
                 href={`/blog/${post.id}`}
                 className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
               >
                 Devamını Oku →
-              </a>
+              </Link>
             </div>
           ))}
         </div>
